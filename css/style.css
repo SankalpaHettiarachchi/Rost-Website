@@ -5114,13 +5114,14 @@ a:focus {
   left: 0;
   top: 0;
   z-index: 10;
+  padding: 100px;
 }
 
 @media (max-width: 767px) {
   .contact-section .contact-map {
     position: static;
     top: 0;
-    height: 250px;
+    padding: 0px;
   }
 }
 
