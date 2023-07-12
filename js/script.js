@@ -950,7 +950,6 @@
         }, 200));
     });
 
-
 })(window.jQuery);
 
 /*
@@ -961,3 +960,49 @@
         window.web_security = "success";
     }
 */
+
+function toggleSection(data) {
+    var overview = document.getElementById("overview");
+    var team = document.getElementById("team");
+    var vision = document.getElementById("vision");
+    var mission = document.getElementById("mission");
+
+    var btnoverview = document.getElementById("btnoverview");
+    var btnvision = document.getElementById("btnvision");
+    var btnmision = document.getElementById("btnmision");
+    var btnteam = document.getElementById("btnteam");
+
+    const section_data = data.dataset.section;
+
+    if(section_data == "overview")
+    {
+        overview.style.display = "block";
+        btnoverview.classList.add("current");
+        [btnteam, btnvision, btnmision].forEach(element => element.classList.remove("current"));
+        [team, vision, mission].forEach(element => element.style.display = "none");
+    }
+    else if(section_data == "team")
+    {
+        team.style.display = "block";
+        btnteam.classList.add("current");
+        [btnoverview, btnvision, btnmision].forEach(element => element.classList.remove("current"));
+        [overview, vision, mission].forEach(element => element.style.display = "none");
+    }
+    else if(section_data == "vision")
+    {
+        vision.style.display = "block";
+        btnvision.classList.add("current");
+        [btnoverview, btnteam, btnmision].forEach(element => element.classList.remove("current"));
+        [overview, team,mission].forEach(element => element.style.display = "none");
+    }
+    else if(section_data == "mission")
+    {
+        mission.style.display = "block";
+        btnmision.classList.add("current");
+        [btnoverview, btnteam, btnvision].forEach(element => element.classList.remove("current"));
+        [overview, team, vision].forEach(element => element.style.display = "none");
+    }
+    
+
+    
+}

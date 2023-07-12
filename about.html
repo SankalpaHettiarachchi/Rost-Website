@@ -117,17 +117,16 @@
         </div>
         <!-- end page-title-wrapper -->
 
-
         <!-- start page title bottom menu -->
         <div class="pg-title-btm-menu">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
                         <ul>
-                            <li class="current" ><a href="about.html">Overview</a></li>
-                            <li><a href="#">Vision</a></li>
-                            <li><a href="#">Mision</a></li>
-                            <li><a href="#">Team</a></li>
+                            <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#">Overview</a></li>
+                            <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#">Vision</a></li>
+                            <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#">Mission</a></li>
+                            <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#">Team</a></li>
                         </ul>
                     </div>
                 </div>
@@ -135,9 +134,8 @@
         </div>
         <!-- start page title bottom menu -->
 
-
         <!-- start of overview-section --> 
-        <section class="overview-section section-padding">
+        <section id="overview" class="overview-section section-padding">
             <h2 class="hidden">Overview</h2>
             <div class="container">
                 <div class="row">
@@ -154,56 +152,536 @@
                                 <a href="https://www.youtube.com/embed/opj24KnzrWo?autoplay=1" class="video-play" data-type="iframe"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <div class="chart-area raised-chart">
-                            <canvas id="chart"></canvas>
-                        </div>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
-        <!-- end of overview-section -->
-
-
-        <!-- start of fun-fact --> 
-        <section class="fun-fact section-padding">
-            <div class="container">
-                <div class="row section-title-s4">
-                    <div class="col col-xs-12">
-                        <h2>Some facts in <span>Numbers</span></h2>
-                    </div>
-                </div> <!-- end section-title -->
+        <!-- end of overview-section -->  
         
-                <div class="row start-count">
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h4><span  class="counter" data-count="1200">00</span><span>+</span></h4>
-                            <h3>Projects</h3>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
-                        </div>
-                    </div>
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h4><span  class="counter" data-count="800">00</span><span>+</span></h4>
-                            <h3>Clients</h3>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
-                        </div>
-                    </div>
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h4><span  class="counter" data-count="99">00</span><span>%</span></h4>
-                            <h3>Satisfaction</h3>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+        <!-- start of vision-section --> 
+        <section style="display: none;" id="vision" class="overview-section section-padding">
+            <h2>Vision</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-10 col-lg-offset-1 content">
+                        <p class="overview-text"><span>Mega Industry,</span> headquartered in <span>Upper Richmond Rd, London,</span> is a leading international supplier of equipment and services to the international makets.</p>
+
+                        <div class="overview-pic-video">
+                            <div class="img-holder">
+                                <a href="#"><img src="images/about-us/sw.png" alt></a>
+                                <img src="images/overview/img-1.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="video-holder">
+                                <img src="images/overview/img-2.jpg" alt class="img img-responsive">
+                                <a href="https://www.youtube.com/embed/opj24KnzrWo?autoplay=1" class="video-play" data-type="iframe"><i class="fa fa-youtube-play"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
-        <!-- end of fun-fact -->      
+        <!-- end of vision-section -->
 
+        <!-- start of mission-section --> 
+        <section style="display: none;" id="mission" class="overview-section section-padding">
+            <h2>Mission</h2>
+            <div class="container">
+                <div class="col col-lg-10 col-lg-offset-1 content">
+                    <p class="overview-text"><span>Mega Industry,</span> headquartered in <span>Upper Richmond Rd, London,</span> is a leading international supplier of equipment and services to the international makets.</p>
+
+                    <div class="overview-pic-video">
+                        <div class="img-holder">
+                            <a href="#"><img src="images/about-us/sw.png" alt></a>
+                            <img src="images/overview/img-1.jpg" alt class="img img-responsive">
+                        </div>
+                        <div class="video-holder">
+                            <img src="images/overview/img-2.jpg" alt class="img img-responsive">
+                            <a href="https://www.youtube.com/embed/opj24KnzrWo?autoplay=1" class="video-play" data-type="iframe"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end of mission-section -->
+
+        <!-- start of team-section --> 
+        <section id="team" style ="display: none;"; class="team-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="team-tab">
+                            <ul class="tablist">
+                                <li class="active">
+                                    <a href="#directors" aria-controls="directors" data-toggle="tab">Board of Directors</a>
+                                </li>
+                                <li>
+                                    <a href="#managers" aria-controls="managers" data-toggle="tab">Project Managers</a>
+                                </li>
+                                <li>
+                                    <a href="#automation" aria-controls="automation" data-toggle="tab">Automation Teams</a>
+                                </li>
+                                <li>
+                                    <a href="#steel" aria-controls="steel" data-toggle="tab">Steel Teams</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="directors">
+                                    <div class="team-members">
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-1.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-2.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-3.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-4.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-5.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-6.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="managers">
+                                    <div class="team-members">
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-1.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-2.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-3.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-4.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-5.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-6.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="automation">
+                                    <div class="team-members">
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-1.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-2.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-3.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-4.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-5.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-6.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="steel">
+                                    <div class="team-members">
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-1.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-2.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-3.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-4.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-5.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member">
+                                            <div class="inner">
+                                                <div class="member-pic">
+                                                    <img src="images/team/img-6.jpg" alt class="img img-responsive">
+                                                </div>
+                                                <div class="member-details">
+                                                    <div class="info">
+                                                        <h3>Andrew Phillips</h3>
+                                                        <span class="post">Sr. Project Manager</span>
+                                                    </div>
+                                                    <ul class="social-links">
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end of team-section -->
 
         <!-- start footer-->
         <footer class="site-footer">
