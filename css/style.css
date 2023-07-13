@@ -3976,7 +3976,7 @@ a:focus {
 }
 
 .site-footer .about-widget .logo {
-  background: url("../images/footer-logo.png") left center/auto no-repeat local;
+  background: url("../images/logo.png") left center/auto no-repeat local;
   position: relative;
   padding-left: 42px;
 }
