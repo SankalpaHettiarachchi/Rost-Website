@@ -123,10 +123,10 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <ul>
-                            <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#">Objectives</a></li>
-                            <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#">Vision</a></li>
-                            <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#">Mission</a></li>
-                            <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#">Team</a></li>
+                            <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#" onclick="event.preventDefault();">Objectives</a></li>
+                            <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Vision</a></li>
+                            <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Mission</a></li>
+                            <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Team</a></li>
                         </ul>
                     </div>
                 </div>
@@ -162,60 +162,58 @@
         </section>
         <!-- end of overview-section -->  
         
-        <!-- start of vision-section --> 
-        <section style="display: none;" id="vision" class="overview-section section-padding">
-            <div class="container">
-                <div class="container about-us section-padding">
-                    <div class="row">
-                        <div class="col col-md-6">
-                            <div class="section-title-s1">
-                                <h2>Our Objectives</h2>
-                            </div>
-                            <div class="about-details">                                            
-                                <ul>
-                                    <li>Comprehend, create, and learn robotics</li>
-                                    <li>Foster creativity and expression </li>
-                                    <li>Promote collaboration with innovators </li>
-                                    <li>Encourage research and knowledge sharing </li>
-                                    <li>Build industry partnerships </li>
-                                    <li>Promote knowledge and engagemen </li>
-                                </ul>
+        <!-- start of vision-section -->
+                <section style="display: none;" id="vision" class="overview-section" >
+                    <div class="container">
+                        <div class="container about-us section-padding">
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="section-title-s1">
+                                        <h2>Our Vision</h2>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <p class="card-text">
+                                            <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
+                                            artificial intelligence world.
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <span>Images</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-md-6">
-                            <span>Images</span>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end of vision-section -->
+                </section>
 
-        <!-- start of mission-section --> 
-        <section style="display: none;" id="mission" class="overview-section section-padding">
-            <div class="container">   
-                <div class="row">
-                    <h2>Mission</h2>
-                    <div class="col col-lg-10 col-lg-offset-1 content">
-                        <p class="overview-text">
-                            To inspire minds to be engaging with mentor based programs that 
-                            develop creativity, technical skills including self-confidence, 
-                            communication and leadership to interfere with real world.
-                        </p>
-                        <div class="overview-pic-video">
-                            <div class="img-holder">
-                                <a href="#"><img src="images/about-us/sw.png" alt></a>
-                                <img src="images/overview/img-1.jpg" alt class="img img-responsive">
+        <!-- start of mission-section -->
+            <section style="display: none;" id="mission" class="overview-section" >
+                <div class="container">
+                    <div class="container about-us section-padding">
+                        <div class="row">
+                            <div class="col col-md-6">
+                                <div class="section-title-s1">
+                                    <h2>Our Mission</h2>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                    <p class="card-text">
+                                        <span class="quote-mark ">"</span> To inspire minds to be engaging with 
+                                        mentor based programs that develop creativity, technical skills 
+                                        including self-confidence, communication and leadership to interfere 
+                                        with real world.
+                                         
+                                    </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="video-holder">
-                                <img src="images/overview/img-2.jpg" alt class="img img-responsive">
-                                <a href="https://www.youtube.com/embed/opj24KnzrWo?autoplay=1" class="video-play" data-type="iframe"><i class="fa fa-youtube-play"></i></a>
+                            <div class="col col-md-6">
+                                <span>Images</span>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>  
-        </section>
+            </section>
         <!-- end of mission-section -->
 
         <!-- start of team-section --> 

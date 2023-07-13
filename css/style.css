@@ -8359,3 +8359,20 @@ a:focus {
 
 .portfolio img {width: 100%;}
 
+.card {
+  background-color: #ffd2ad;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.card-text {
+  font-size: 25px;
+  color: #000000;
+}
+.quote-mark {
+  font-size: 50px;
+  color: #000000;
+}
+
