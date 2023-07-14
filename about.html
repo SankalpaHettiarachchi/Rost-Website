@@ -121,7 +121,7 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <ul>
-                            <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#" onclick="event.preventDefault();">Objectives</a></li>
+                            <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#" onclick="event.preventDefault();">Overview</a></li>
                             <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Vision</a></li>
                             <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Mission</a></li>
                             <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Team</a></li>
@@ -133,15 +133,15 @@
         <!-- start page title bottom menu -->
 
         <!-- start of overview-section --> 
-        <section id="overview" class="overview-section">
+        <section  id="overview" class="overview-section" >
             <div class="container">
                 <div class="container about-us section-padding">
                     <div class="row">
-                        <div class="service-single-content">
+                        <div class="col col-md-6">
                             <div class="service-details">
                                 <div class="container">
                                     <div class="row">
-                                    <h2 class="fnt">Overview</h2>
+                                        <h2 class="fnt">Overview</h2>
                                         <div class="col col-sm-6">
                                             <p>Welcome to the Robotic Association of the Faculty of Technology, Rajarata University of Sri Lanka!. 
                                                 We offer exciting membership opportunities for undergraduate students interested in robotics 
@@ -153,10 +153,8 @@
                                                 in this rapidly evolving field.
                                             </p>
                                         </div>
-                                        <div class="col">
-                                            <div class="col col-sm-6">
-                                                Image
-                                            </div>
+                                        <div class="col col-sm-6">
+                                            Image
                                         </div>
                                     </div>
                                 </div>
@@ -177,59 +175,60 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="panel-group faq-accordion theme-accordion-s2 section-padding" id="accordion">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">Membership Eligibility</a>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in">
-                                            <div class="panel-body">
-                                                <p>
-                                                    All undergraduate students enrolled in the Faculty of Technology are 
-                                                    eligible to apply for membership in our organization.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Membership Benefits</a>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <p>All active and accepted members will receive an ID card, providing 
-                                                    identification wherever necessary. Junior members will be issued a valid ID card for one year.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Appointment Process</a>
-                                        </div>
-                                        <div id="collapseThree" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <p>All positions within the society will be filled through formal meetings.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Term Duration</a>
-                                        </div>
-                                        <div id="collapseFour" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <p>The duration of all positions will be limited to one year.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="panel-group faq-accordion theme-accordion-s2 " id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">Membership Eligibility</a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        All undergraduate students enrolled in the Faculty of Technology are 
+                                        eligible to apply for membership in our organization.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Membership Benefits</a>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>All active and accepted members will receive an ID card, providing 
+                                        identification wherever necessary. Junior members will be issued a valid ID card for one year.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Appointment Process</a>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>All positions within the society will be filled through formal meetings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Term Duration</a>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>The duration of all positions will be limited to one year.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </section>
-        <!-- end of overview-section -->  
+        </section> 
+        <!-- end of overview-section --> 
+        
         
         <!-- start of vision-section -->
                 <section style="display: none;" id="vision" class="overview-section" >
@@ -288,10 +287,10 @@
                         <div class="team-tab">
                             <ul class="tablist">
                                 <li class="active">
-                                    <a href="#officials" aria-controls="officials" data-toggle="tab"><h3 class="fnt">Board of Official</h3></a>
+                                    <a href="#officials" aria-controls="officials" data-toggle="tab"><h2 class="fnt">Board of Official</h2></a>
                                 </li>
                                 <li>
-                                    <a href="#advisors" aria-controls="managers" data-toggle="tab"><h3 class="fnt">Our Advisors</h3></a>
+                                    <a href="#advisors" aria-controls="managers" data-toggle="tab"><h2 class="fnt">Our Advisors</h2></a>
                                 </li>
                             </ul>
 

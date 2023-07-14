@@ -8382,3 +8382,25 @@ a:focus {
   font-weight: bold;
   color: #1f252e;
 }
+#res_map{
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: Center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 50%;
+}
+
+iframe{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: invert(100%);
+}
+@media (max-width: 767px) {
+  #res_map {
+    padding-bottom: 1000px;
+  }
+}
