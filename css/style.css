@@ -211,7 +211,7 @@ a:focus {
 
 @media (max-width: 767px) {
   .section-padding {
-    padding: 75px 0 80px;
+    padding: 0px 0 150px;
   }
 }
 
@@ -8360,7 +8360,7 @@ a:focus {
 .portfolio img {width: 100%;}
 
 .card {
-  background-color: #ffd2ad;
+  background-color: #9c7e65;
   border: none;
   border-radius: 10px;
   padding: 20px;
@@ -8370,11 +8370,11 @@ a:focus {
 .card-text {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  color: #000000;
+  color: #ffffff;
 }
 .quote-mark {
   font-size: 30px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .fnt{
@@ -8403,4 +8403,11 @@ iframe{
   #res_map {
     padding-bottom: 1000px;
   }
+}
+.about-img{
+  padding-top: 20px;
+  height: 300px;
+  width: 300px; 
+  margin-left: auto; 
+  margin-right: auto;
 }

@@ -113,9 +113,9 @@
                     <div class="col col-xs-12">
                         <ul>
                             <li id="btnoverview" class="current" data-section="overview" onclick="toggleSection(this)" ><a href="#" onclick="event.preventDefault();">Overview</a></li>
-                            <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Vision</a></li>
-                            <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Mission</a></li>
                             <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Team</a></li>
+                            <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Mission</a></li>
+                            <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Vision</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,6 +133,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <h2 class="fnt">Overview</h2>
+                                        <br>
                                         <div class="col col-sm-6">
                                             <p>Welcome to the Robotic Association of the Faculty of Technology, Rajarata University of Sri Lanka!. 
                                                 We offer exciting membership opportunities for undergraduate students interested in robotics 
@@ -145,7 +146,7 @@
                                             </p>
                                         </div>
                                         <div class="col col-sm-6">
-                                            Image
+                                            <img src="images/about/overview.jpg" alt class="img img-responsive about-img">
                                         </div>
                                     </div>
                                 </div>
@@ -227,6 +228,7 @@
                     <div class="row">
                         <div class="col col-md-6">
                                 <h2 class="fnt">Our Vision</h2>
+                                <br>
                             <div class="card">
                                 <div class="card-body">
                                 <p class="card-text">
@@ -236,8 +238,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-md-6">
-                            <span>Images</span>
+                        <div class="col col-md-6 about-image-col">
+                            <img src="images/about/vision.jpg" alt class="img img-responsive about-img">
                         </div>
                     </div>
                 </div>
@@ -250,6 +252,7 @@
                     <div class="row">
                         <div class="col col-md-6">
                             <h2 class="fnt">Our Mission</h2>
+                            <br>
                             <div class="card">
                                 <div class="card-body">
                                 <p class="card-text">
@@ -262,7 +265,7 @@
                             </div>
                         </div>
                         <div class="col col-md-6">
-                            <span>Images</span>
+                            <img src="images/about/mission.jpg" alt class="img img-responsive about-img">
                         </div>
                     </div>
                 </div>
@@ -270,172 +273,175 @@
         <!-- end of mission-section -->
 
         <!-- start of team-section --> 
-        <section id="team" style ="display: none;"; class="team-section section-padding">
+        <section id="team" style ="display: none;" class="team-section overview-section">
             <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="team-tab">
-                            <ul class="tablist">
-                                <li class="active">
-                                    <a href="#officials" aria-controls="officials" data-toggle="tab"><h2 class="fnt">Board of Official</h2></a>
-                                </li>
-                                <li>
-                                    <a href="#advisors" aria-controls="managers" data-toggle="tab"><h2 class="fnt">Our Advisors</h2></a>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active" id="officials">
-                                    <div class="team-members">
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/president.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Mohamed Humaidh</h3>
-                                                        <span class="post">President</span>
+                <div class="container about-us section-padding">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <h2 class="fnt">Our Team</h2>
+                            <div class="team-tab">
+                                <ul class="tablist">
+                                    <li class="active">
+                                        <a href="#officials" aria-controls="officials" data-toggle="tab"><h3 class="fnt">Board of Official</h3></a>
+                                    </li>
+                                    <li>
+                                        <a href="#advisors" aria-controls="managers" data-toggle="tab"><h3 class="fnt">Our Advisors</h3></a>
+                                    </li>
+                                </ul>
+    
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="officials">
+                                        <div class="team-members">
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/president.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Mohamed Humaidh</h3>
+                                                            <span class="post">President</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/technical_lead.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Avishka Udara</h3>
-                                                        <span class="post">Technical Lead</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/technical_lead.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Avishka Udara</h3>
+                                                            <span class="post">Technical Lead</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/vice_president.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Ms. Gayani Nadessha</h3>
-                                                        <span class="post">Vice President</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/vice_president.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Ms. Gayani Nadessha</h3>
+                                                            <span class="post">Vice President</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/junior_editor.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Nipun Dilshan</h3>
-                                                        <span class="post">Editor</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/junior_editor.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Nipun Dilshan</h3>
+                                                            <span class="post">Editor</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/Event_organizer.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Dileesha Lakshan</h3>
-                                                        <span class="post">Event Organizer</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/Event_organizer.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Dileesha Lakshan</h3>
+                                                            <span class="post">Event Organizer</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/media_editor.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Dinuja Kelum</h3>
-                                                        <span class="post">Media Editor</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/media_editor.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Dinuja Kelum</h3>
+                                                            <span class="post">Media Editor</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="advisors">
-                                    <div class="team-members">
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/vector.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Husni Mohammed</h3>
-                                                        <span class="post">Assistant Lecturer</span>
+                                    <div role="tabpanel" class="tab-pane fade" id="advisors">
+                                        <div class="team-members">
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/vector.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Husni Mohammed</h3>
+                                                            <span class="post">Assistant Lecturer</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="member">
-                                            <div class="inner">
-                                                <div class="member-pic">
-                                                    <img src="images/team/vector.jpg" alt class="img img-responsive">
-                                                </div>
-                                                <div class="member-details">
-                                                    <div class="info">
-                                                        <h3>Mr. Rusiru Rajakaruna</h3>
-                                                        <span class="post">Lecturer</span>
+                                            <div class="member">
+                                                <div class="inner">
+                                                    <div class="member-pic">
+                                                        <img src="images/team/vector.jpg" alt class="img img-responsive">
                                                     </div>
-                                                    <ul class="social-links">
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    </ul>
+                                                    <div class="member-details">
+                                                        <div class="info">
+                                                            <h3>Mr. Rusiru Rajakaruna</h3>
+                                                            <span class="post">Lecturer</span>
+                                                        </div>
+                                                        <ul class="social-links">
+                                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>                                    
+                                        </div>                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
