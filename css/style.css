@@ -8368,11 +8368,12 @@ a:focus {
   transition: background-color 0.3s ease;
 }
 .card-text {
-  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
   color: #000000;
 }
 .quote-mark {
-  font-size: 50px;
+  font-size: 30px;
   color: #000000;
 }
 
