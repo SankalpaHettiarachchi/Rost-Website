@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Rost-Admin</title>
+    <title>Rost - Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -40,19 +40,17 @@
             </div>
         </div>
         <!-- Spinner End -->
-
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST-Admin</h3>
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST-ADMIN</h3>
                 </a>
                 <div class="navbar-nav w-100">
                     <a href="{{ route('admin') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
                     <a href="{{ route('admin_users') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
                     <a href="{{ route('admin_news') }}" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>News</a>
-                    <a href="{{ route('admin_albums') }}" class="nav-item nav-link"><i class="fa fa-images me-2"></i>Albums</a>
+                    <a href="{{ url('/admin123/albums') }}" class="nav-item nav-link"><i class="fa fa-images me-2"></i>Albums</a>
                     <a href="{{ route('admin_emails') }}" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>Emails</a>
                 </div>
             </nav>
