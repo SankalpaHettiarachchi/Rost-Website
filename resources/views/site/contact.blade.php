@@ -18,8 +18,9 @@
                 <div class="col col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6">
                     <div class="contact-form">
                         <h3>Contact Form</h3>
-                        <h4>Send Email</h4>
-                        <form class="form contact-validation-active" id="contact-form">
+                        <h4>Send Message</h4>
+                        <form  action="{{ route('messages.store') }}" method="POST" class="form contact-validation-active">
+                            @csrf
                             <div>
                                 <input type="text" name="name" class="form-control" placeholder="Full Name">
                             </div>
@@ -27,15 +28,17 @@
                                 <input type="email" name="email" class="form-control" placeholder="Email">
                             </div>
                             <div>
-                                <textarea name="note" class="form-control" placeholder="Message"></textarea>
+                                <textarea name="message" class="form-control" placeholder="Message"></textarea>
                             </div>
                             <div class="submit">
                                 <button type="submit">Send</button>
-                                <span id="loader"><img src="images/contact-ajax-loader.gif" alt="Loader"></span>
                             </div>
                             <div class="error-handling-messages">
-                                <div id="success">Thank you</div>
-                                <div id="error"> Error occurred while sending email. Please try again later. </div>
+                                @if(Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {{ Session::get('success') }}
+                                    </div>
+                                @endif
                             </div>
                         </form>
                     </div>

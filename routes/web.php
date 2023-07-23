@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\MessagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,12 +32,13 @@ Route::get('/admin123/users', function () {
 //     return view('admin.albums');
 // })->name('admin_albums');
 
-Route::get('/admin123/emails', function () {
-    return view('admin.emails');
-})->name('admin_emails');
+// Route::get('/admin123/messages', function () {
+//     return view('admin.messages');
+// })->name('admin_messages');
 
 Route::resource('/admin123/albums', AlbumController::class);
 Route::resource('/admin123/news', NewsController::class);
+Route::resource('/admin123/messages', MessagesController::class);
 
 
 
