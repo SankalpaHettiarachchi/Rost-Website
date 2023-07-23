@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('albums', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->text('album_name');
+            $table->string('heading');
+            $table->string('cover');
             $table->text('description')->nullable();
             $table->date('upload_date')->nullable();
-            $table->text('image_count')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums');
+        Schema::dropIfExists('news');
     }
 };

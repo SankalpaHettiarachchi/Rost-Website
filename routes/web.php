@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +23,9 @@ Route::get('/admin123/users', function () {
     return view('admin.users');
 })->name('admin_users');
 
-Route::get('/admin123/news', function () {
-    return view('admin.news');
-})->name('admin_news');
+// Route::get('/admin123/news', function () {
+//     return view('admin.news');
+// })->name('admin_news');
 
 // Route::get('/admin123/albums', function () {
 //     return view('admin.albums');
@@ -35,6 +36,7 @@ Route::get('/admin123/emails', function () {
 })->name('admin_emails');
 
 Route::resource('/admin123/albums', AlbumController::class);
+Route::resource('/admin123/news', NewsController::class);
 
 
 

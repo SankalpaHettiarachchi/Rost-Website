@@ -23,9 +23,11 @@ class AlbumController extends Controller
         $album->album_name = $albumName;
         $album->description = $description;
         $album->upload_date = $date;
+        $album->image_count = count($request->file('ad_iamges'));
         $album->save();
 
         $this_album_id= $album->id;
+        $imgcount = 0;
         foreach ($request->file('ad_iamges') as $image) {
             $imageName = $image->getClientOriginalName();
             $image->move(public_path('uploads'), $imageName);
@@ -35,6 +37,7 @@ class AlbumController extends Controller
                 'album_id' =>$this_album_id,
             ]);
         }
+
 
         return redirect('/admin123/albums');
     }

@@ -56,7 +56,7 @@
                             <th scope="col">Album Name</th>
                             <th scope="col">Description</th>
                             <th scope="col">Upload Date</th>
-                            <th scope="col">Visibilty</th>
+                            <th scope="col">Number of Images</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -66,7 +66,7 @@
                                 <td>{{ $item->album_name }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td>{{ $item->upload_date }}</td>
-                                <td>{{ $item->visibility }}</td>
+                                <td>{{ $item->image_count }}</td>
                                 <td>
                                     <a href="{{ route('albums.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Edit</button></a>
                                     <form method="POST" action="{{ url('/admin123/albums' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
