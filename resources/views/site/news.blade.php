@@ -12,32 +12,16 @@
                 <div class="col col-md-9 col-sm-12 blog-single-content">
                     <div class="post">
                         <div class="media">
-                            <img src="images/blog-detail/img-1.jpg" alt class="img img-responsive">
+                            <img src="{{ asset('uploads/'. $newsitems->cover) }}" alt class="img img-responsive">
                         </div>
                         <div class="post-title-meta">
-                            <button class="btn">Construction</button>
-                            <h2>Arnold Engineering Development Complex build with us</h2>
+                            <h2>{{ isset($newsitems) ? $newsitems->heading : '' }}</h2>
                             <ul>
-                                <li><a href="#">Hasib sharif</a></li>
                                 <li><a href="#">21 feb, 2016</a></li>
                             </ul>
                         </div>
                         <div class="post-body">
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                            <p>Which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum genera tors on the Internet tend to repeat predefined chunks as necessary, making this the first true genera tor on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence </p>
-                        </div>
-                        <div class="gallery-post">
-                            <div class="gallery">
-                                <div>
-                                    <img src="images/blog-detail/img-2.jpg" alt class="img img-responsive">
-                                </div>
-                                <div>
-                                    <img src="images/blog-detail/img-3.jpg" alt class="img img-responsive">
-                                </div>
-                            </div>
-                            
-                            <h3>Lorem Ipsum is not simply random text. </h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
+                            <p>{{ isset($newsitems) ? $newsitems->description : '' }}</p>
                         </div>
                     </div>
                 </div>

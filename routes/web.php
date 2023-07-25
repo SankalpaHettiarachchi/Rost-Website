@@ -67,9 +67,9 @@ Route::get('/about', function () {
     return view('site.about');
 })->name('about');
 
-Route::get('/news', function () {
-    return view('site.news');
-})->name('news');
+// Route::get('/news', function () {
+//     return view('site.news');
+// })->name('news');
 
 Route::get('/albums', function () {
     return view('site.albums');
@@ -78,3 +78,5 @@ Route::get('/albums', function () {
 Route::get('/contact', function () {
     return view('site.contact');
 })->name('contact');
+
+Route::get('/news', [NewsController::class, 'index_site']);
