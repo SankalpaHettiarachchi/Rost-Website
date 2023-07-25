@@ -2216,7 +2216,10 @@ a:focus {
 
 .blog-sidebar .recent-post-widget .post-pic {
   width: 30%;
+  height: 80px;
+  object-fit: cover;
   float: left;
+  padding-top: 3%;
 }
 
 @media (max-width: 767px) {

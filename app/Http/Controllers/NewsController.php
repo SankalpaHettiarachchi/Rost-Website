@@ -14,9 +14,16 @@ class NewsController extends Controller
     }
 
     public function index_site()
-    {   $id = 1;
-        $newsitems = News::find($id);
-        return view('site.news', compact('newsitems'));
+    { 
+        $newsitems_top2 = News::all()->take(2);
+        $newsitems_recent = News::all();
+        return view('site.news', compact('newsitems_top2','newsitems_recent'));
+    }
+    public function news_click($id)
+    { 
+        $newsitems_top1 = News::find($id);
+        $newsitems_recent = News::all();
+        return view('site.news', compact('newsitems_top1','newsitems_recent'));
     }
 
     public function store(Request $request)

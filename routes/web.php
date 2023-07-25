@@ -80,3 +80,4 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/news', [NewsController::class, 'index_site']);
+Route::get('/news/{id}',[NewsController::class, 'news_click'])->name('news.click');
