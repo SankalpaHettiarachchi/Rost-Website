@@ -9,21 +9,25 @@
     <section class="blog-content-section section-padding">
         <div class="container">
             <div class="row blog-s2-grids">
+            @foreach ($albums as $albums_item )
                 <div class="col col-md-4">
                     <div class="grid">
                         <div class="entry-media">
-                            <img src="images/blog-s2/img-1.jpg" alt class="img img-responsive">
+                            @foreach ($albums_item->images->take(3) as $image_item)
+                                <img src="{{ asset('uploads/'. $image_item->image_name) }}" alt class="img img-responsive">
+                             @endforeach
                         </div>
                         <div class="entry-details">
-                            <h3><a href="#">Approach to Assessing Supply Chain Risk</a></h3>
+                            <h3><a href="#">{{ isset($albums) ? $albums_item->album_name : '' }}</a></h3>
                             <span class="entry-date">30 November, 2018</span>
 
                             <div class="entry-footer">
-                                <a href="#" class="read-more">Show All</a>
+                                <a href="{{ route('albums.click', ['id' => $albums_item->id]) }}">Show All</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            @endforeach
             </div>
             <div class="pagination">
                 <ul>

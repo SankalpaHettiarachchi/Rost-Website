@@ -8300,10 +8300,37 @@ iframe{
     padding-bottom: 1000px;
   }
 }
-.about-img{
+.about-img {
   padding-top: 20px;
-  height: 300px;
-  width: 300px; 
+  height: 100px;
+  width: 100px; 
   margin-left: auto; 
   margin-right: auto;
+}
+
+.image-collection {
+  position: relative; /* Set the container to relative positioning */
+  display: flex;
+  gap: -50px; /* Adjust the negative gap between images as needed */
+  justify-content: center; /* Center the images in the container */
+}
+
+.image-collection img {
+  width: 200px; /* Adjust the width of each image as needed */
+  height: 150px; /* Adjust the height of each image as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a box-shadow effect for layering */
+  border-radius: 8px; /* Optionally, add rounded corners for a more polished look */
+  position: relative; /* Set the images to relative positioning */
+  z-index: 1; /* Set a base z-index value for each image */
+}
+
+/* Add styles for overlapping each image */
+.image-collection img:nth-child(2) {
+  transform: translateX(-30px); /* Adjust the horizontal overlap distance for the second image */
+  z-index: 2; /* Set a higher z-index for the second image to place it on top */
+}
+
+.image-collection img:nth-child(3) {
+  transform: translateX(-60px); /* Adjust the horizontal overlap distance for the third image */
+  z-index: 3; /* Set a higher z-index for the third image to place it on top */
 }
