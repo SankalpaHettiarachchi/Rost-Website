@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('heading');
             $table->string('cover');
+            $table->string('fb_link')->nullable();
+            $table->string('in_link')->nullable();
             $table->text('description')->nullable();
             $table->date('upload_date')->nullable();
             $table->timestamps();

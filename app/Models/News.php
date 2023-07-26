@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    protected $fillable = ['heading', 'cover', 'description', 'upload_date'];
+    protected $fillable = ['heading', 'cover', 'description', 'upload_date','fb_link','in_link'];
 }

@@ -28,27 +28,44 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-        $image = $request->file('cover');
-        $imageName = $image->getClientOriginalName();
-        $image->move(public_path('uploads'), $imageName);
+        $request->validate([
+            'heading' => 'required|string|max:100',
+            'description' => 'required|string|min:200|max:400',
+            'upload_date' => 'required|date',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'fb_link' => 'nullable|url',
+            'in_link' => 'nullable|url',
+        ]);
+
+        if ($request->hasFile('cover')) {
+            $image = $request->file('cover');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('uploads'), $imageName);
+
+            list($width, $height) = getimagesize(public_path('uploads/' . $imageName));
+
+            if ($width !== 1075 || $height !== 716) {
+
+                return back()->withInput()->withErrors('The cover image should be exactly 1075px x 716px .');
+            }
+        }
+
+        $heading = $request->input('heading');
+        $description = $request->input('description');
 
         $newsItem = new News([
-            'heading' => $request->input('heading'),
+            'heading' => $heading,
             'cover' => $imageName,
-            'description' => $request->input('description'),
+            'description' => $description,
             'upload_date' => $request->input('upload_date'),
+            'fb_link' => $request->input('fb_link'),
+            'in_link' => $request->input('in_link'),
         ]);
         $newsItem->save();
         return redirect('/admin123/news');
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $newsitem = News::find($id);
@@ -61,26 +78,26 @@ class NewsController extends Controller
         ]);    
         
     }
-    
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
 
     public function update(Request $request, $id)
     {
-        //
+        $news = News::find($id);
+        $image = $request->file('cover');
+        $imageName = $image->getClientOriginalName();
+        $image->move(public_path('uploads'), $imageName);
+
+        $news->update
+        ([
+            'heading' => $request->input('heading'),
+            'cover' => $imageName,
+            'description' => $request->input('description'),
+            'upload_date' => $request->input('upload_date'),
+            'fb_link' => $request->input('fb_link'),
+            'in_link' => $request->input('in_link'),
+        ]);
+
+        return redirect('/admin123/news');
     }
-
-
 
     public function destroy($id)
     {

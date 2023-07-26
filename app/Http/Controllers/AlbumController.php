@@ -21,8 +21,6 @@ class AlbumController extends Controller
     {
         $albums = Albums::all();
         $album_images = Image::where('album_id', $id)->get();
-        // foreach($album_images as $image)
-        //     echo $image->image_name . "\n";
         return view('site.albums', compact('album_images',$album_images))->with('albums', $albums);
     }
 
@@ -40,7 +38,7 @@ class AlbumController extends Controller
         $album->save();
 
         $this_album_id= $album->id;
-        $imgcount = 0;
+
         foreach ($request->file('ad_iamges') as $image) {
             $imageName = $image->getClientOriginalName();
             $image->move(public_path('uploads'), $imageName);
