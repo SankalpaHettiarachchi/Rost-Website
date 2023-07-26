@@ -19,8 +19,11 @@ class AlbumController extends Controller
     }
     public function see_all($id)
     {
-        $album_images = Image::find($id);
-        return view('site.albums', compact('album_images','album_images'));
+        $albums = Albums::all();
+        $album_images = Image::where('album_id', $id)->get();
+        // foreach($album_images as $image)
+        //     echo $image->image_name . "\n";
+        return view('site.albums', compact('album_images',$album_images))->with('albums', $albums);
     }
 
     public function store(Request $request)

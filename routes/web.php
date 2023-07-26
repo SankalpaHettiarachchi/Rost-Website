@@ -83,6 +83,6 @@ Route::get('/news', [NewsController::class, 'index_site']);
 Route::get('/news/{id}',[NewsController::class, 'news_click'])->name('news.click');
 
 Route::get('/albums', [AlbumController::class, 'index_site']);
-Route::get('/albums/{id}', [AlbumController::class, 'see_all'])->name('album.click');
+Route::get('/albums/{id}',[AlbumController::class, 'see_all'])->name('albums.click');
 
 

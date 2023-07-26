@@ -37,5 +37,12 @@
                 </ul>
             </div>                
         </div>
+        @if( isset($album_images))
+            @foreach ($album_images as $image )
+                <div class="img-holder">
+                    <img src="{{ asset('uploads/'. $image->image_name) }}" alt="">
+                </div>
+            @endforeach
+        @endif
     </section>
 @endsection
