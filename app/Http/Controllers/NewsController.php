@@ -50,18 +50,18 @@ class NewsController extends Controller
             }
         }
 
-        $heading = $request->input('heading');
-        $description = $request->input('description');
+        // $heading = $request->input('heading');
+        // $description = $request->input('description');
 
-        $newsItem = new News([
-            'heading' => $heading,
-            'cover' => $imageName,
-            'description' => $description,
-            'upload_date' => $request->input('upload_date'),
-            'fb_link' => $request->input('fb_link'),
-            'in_link' => $request->input('in_link'),
-        ]);
-        $newsItem->save();
+        // $newsItem = new News([
+        //     'heading' => $heading,
+        //     'cover' => $imageName,
+        //     'description' => $description,
+        //     'upload_date' => $request->input('upload_date'),
+        //     'fb_link' => $request->input('fb_link'),
+        //     'in_link' => $request->input('in_link'),
+        // ]);
+        // $newsItem->save();
         return redirect('/admin123/news');
 
     }

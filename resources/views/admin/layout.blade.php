@@ -20,6 +20,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Data Table Style -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}" rel="stylesheet" />
@@ -105,7 +108,8 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('admin/lib/chart/chart.min.js') }}"></script>
     <script src="{{ asset('admin/lib/easing/easing.min.js') }}"></script>
@@ -117,6 +121,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('admin/js/main.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
 </body>
 
 </html>

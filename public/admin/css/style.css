@@ -287,3 +287,15 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+
+div.dataTables_length select {
+    background-color: #eaeaea;
+    color: #ccc;
+}
+
+/* Change background color of the search input field */
+div.dataTables_filter input {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #ccc;
+}

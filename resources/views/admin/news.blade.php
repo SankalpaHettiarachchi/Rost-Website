@@ -4,9 +4,9 @@
     <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary rounded h-100 p-4">
             @if(isset($newsitem))
-                <h6 class="mb-4">Update News</h6>
+                <h3 class="mb-4">Update News</h3>
             @else
-                <h6 class="mb-4">Add News</h6>
+                <h3 class="mb-4">Add News</h3>
             @endif
             @if(isset($newsitem))
             <form action="{{ url('/admin123/news/'.$newsitem->id) }}" method="post" enctype="multipart/form-data">
@@ -36,7 +36,7 @@
                 <div class="row mb-3">
                     <label for="" class="col-sm-2 col-form-label">Cover Image</label>
                     <div class="col-sm-10">
-                        <input class="form-control bg-dark" type="file" name="cover" multiple required>                    
+                        <input class="form-control bg-dark" type="file" name="cover" multiple required>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -79,19 +79,19 @@
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">News</h6>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table table-borderless" id="news_tbl">
                             <thead>
                                 <tr>
                                     <th scope="col">Heading</th>
                                     <th scope="col">description</th>
-                                    <th scope="col">Upload Date</th>
-                                    <th scope="col">Cover Image</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" style="min-width: 150px">Upload Date</th>
+                                    <th scope="col" style="min-width: 150px">Cover Image</th>
+                                    <th scope="col" style="min-width: 95px">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($newsitems as $item)
-                                    <tr>
+                                    <tr style="background-color:#191C24">
                                         <td>{{ $item->heading }}</td>
                                         <td>{{ $item->description }}</td>
                                         <td>{{ $item->upload_date }}</td>
