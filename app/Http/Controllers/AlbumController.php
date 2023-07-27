@@ -26,31 +26,46 @@ class AlbumController extends Controller
 
     public function store(Request $request)
     {
-        $albumName = $request->input('al_name');
-        $date = $request->input('al_date');
-        $description = $request->input('al_description');
+        $request->validate([
+            'al_name' => 'required|string|max:100',
+            'al_date' => 'required|date',
+            'al_description' => 'required|string|min:50|max:200',
+            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        if($request)
+        {
+            $albumName = $request->input('al_name');
+            $date = $request->input('al_date');
+            $description = $request->input('al_description');
 
-        $album = new Albums();
-        $album->album_name = $albumName;
-        $album->description = $description;
-        $album->upload_date = $date;
-        $album->image_count = count($request->file('ad_iamges'));
-        $album->save();
+            $album = new Albums();
+            $album->album_name = $albumName;
+            $album->description = $description;
+            $album->upload_date = $date;
+            $album->image_count = count($request->file('ad_iamges'));
+            $album->save();
 
-        $this_album_id= $album->id;
+            $this_album_id= $album->id;
 
-        foreach ($request->file('ad_iamges') as $image) {
-            $imageName = $image->getClientOriginalName();
-            $image->move(public_path('uploads'), $imageName);
+            foreach ($request->file('ad_iamges') as $image) {
+                $imageName = $image->getClientOriginalName();
+                $image->move(public_path('uploads'), $imageName);
 
-            Image::create([
-                'image_name' => $imageName,
-                'album_id' =>$this_album_id,
-            ]);
+                Image::create([
+                    'image_name' => $imageName,
+                    'album_id' =>$this_album_id,
+                ]);
+            }
+
+
+            return redirect('/admin123/albums');
         }
-
-
-        return redirect('/admin123/albums');
+        else
+        {
+            return redirect('/admin123/albums');
+        }
+        
+        
     }
     public function show($id)
     {
@@ -66,30 +81,46 @@ class AlbumController extends Controller
 
     public function update(Request $request, $id)
     {
-        $album = Albums::find($id);
-        Image::where('album_id', $id)->delete();
-
-        $albumName = $request->input('al_name');
-        $date = $request->input('al_date');
-        $description = $request->input('al_description');
-
-        $album->update
-        ([
-            'album_name' => $albumName,
-            'description' => $description,
-            'upload_date' => $date,
+        $request->validate([
+            'al_name' => 'required|string|max:100',
+            'al_date' => 'required|date',
+            'al_description' => 'required|string|min:50|max:200',
+            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
-        foreach ($request->file('ad_iamges') as $image) {
-            $imageName = $image->getClientOriginalName();
-            $image->move(public_path('uploads'), $imageName);
+        if($request)
+        {
+            
+            $album = Albums::find($id);
+            Image::where('album_id', $id)->delete();
 
-            Image::create([
-                'image_name' => $imageName,
-                'album_id' =>$id,
+            $albumName = $request->input('al_name');
+            $date = $request->input('al_date');
+            $description = $request->input('al_description');
+            $album->image_count = count($request->file('ad_iamges'));
+
+            $album->update
+            ([
+                'album_name' => $albumName,
+                'description' => $description,
+                'upload_date' => $date,
+                'image_count' => $album->image_count,
             ]);
-        }
+            foreach ($request->file('ad_iamges') as $image) {
+                $imageName = $image->getClientOriginalName();
+                $image->move(public_path('uploads'), $imageName);
 
-        return redirect('/admin123/albums');
+                Image::create([
+                    'image_name' => $imageName,
+                    'album_id' =>$id,
+                ]);
+            }
+
+            return redirect('/admin123/albums');
+            }
+            else
+            {
+                return redirect('/admin123/albums');
+            }
     }
 
     public function destroy($id)

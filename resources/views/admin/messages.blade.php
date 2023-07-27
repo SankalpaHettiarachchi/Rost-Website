@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary rounded h-100 p-4">
-            <h6 class="mb-4">Message Details</h6>
+            <h4 class="mb-4">Message Details</h4>
             <div class="form-floating mb-3">
                 <input type="taxt" class="form-control" value="{{ isset($messageitem) ? $messageitem->full_name : '' }}" id="" placeholder="">
             </div>
@@ -18,25 +18,25 @@
         <div class="row g-4">
             <div class="col-12">
                 <div class="bg-secondary rounded h-100 p-4">
-                    <h6 class="mb-4">Messages</h6>
+                    <h4 class="mb-4">All Messages</h4>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" id="msg_tbl">
                             <thead>
                                 <tr>
-                                    <th scope="col">Full Name</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Full Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Message</th>
-                                    <th scope="col">Sent Date</th>
-                                    <th scope="col">Is Read</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Sent Date</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Is Read</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($messageitems as $item)
-                                    <tr>
+                                    <tr style="background-color:#191C24">
                                         <td>{{ $item->full_name }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td>{{ $item->message }}</td>
+                                        <td style="text-align: justify">{{ $item->message }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>{{ $item->is_read ? 'Yes' : 'No' }}</td>
                                         <td>

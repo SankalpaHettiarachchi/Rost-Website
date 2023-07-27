@@ -22,9 +22,9 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Date</label>
+                    <label for="" class="col-sm-2 col-form-label">Upload Date</label>
                     <div class="col-sm-10">
-                        <input type="" class="form-control" name="al_date" value="{{ isset($album) ? $album->upload_date : '' }}"required>
+                        <input type="date" style="max-width: 10em" class="form-control date-" name="al_date" value="{{ isset($album) ? $album->upload_date : '' }}" required>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -44,27 +44,38 @@
                 @else
                     <button type="submit" class="btn btn-primary">Save Album</button>
                 @endif
+                @if ($errors->any())
+                    <div class="col-sm-10">
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
             </form>
         </div>
         <br>
         <div class="bg-secondary rounded h-100 p-4">
             <h6 class="mb-4">Albums</h6>
             <div class="table-responsive">
-                <table class="table">
+                <table class="table" id="albm_tbl">
                     <thead>
                         <tr>
-                            <th scope="col">Album Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Upload Date</th>
-                            <th scope="col">Number of Images</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" style=" text-align:center">Album Name</th>
+                            <th scope="col" style=" text-align:center">Description</th>
+                            <th scope="col" style="min-width: 150px ;text-align:center">Upload Date</th>
+                            <th scope="col" style="min-width: 100px ;text-align:center">Image Count</th>
+                            <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($albums as $item)
-                            <tr>
+                            <tr style="background-color:#191C24">
                                 <td>{{ $item->album_name }}</td>
-                                <td>{{ $item->description }}</td>
+                                <td style="text-align: justify" >{{ $item->description }}</td>
                                 <td>{{ $item->upload_date }}</td>
                                 <td>{{ $item->image_count }}</td>
                                 <td>

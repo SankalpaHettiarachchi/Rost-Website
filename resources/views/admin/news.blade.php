@@ -79,7 +79,7 @@
                 <div class="bg-secondary rounded h-100 p-4">
                     <h4 class="mb-4">News on the Page</h4>
                     <div class="table-responsive">
-                        <table class="table table-borderless" id="news_tbl">
+                        <table class="table" id="news_tbl">
                             <thead>
                                 <tr>
                                     <th scope="col" style=" text-align:center">Heading</th>
