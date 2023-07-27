@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container-fluid pt-4 px-4">
-        <div class="bg-secondary rounded h-100 p-4">
+        <div class="bg-secondary rounded h-100 p-4" >
             @if(isset($newsitem))
-                <h3 class="mb-4">Update News</h3>
+                <h4 class="mb-4">Update News</h4>
             @else
-                <h3 class="mb-4">Add News</h3>
+                <h4 class="mb-4">Add News</h4>
             @endif
             @if(isset($newsitem))
             <form action="{{ url('/admin123/news/'.$newsitem->id) }}" method="post" enctype="multipart/form-data">
@@ -77,25 +77,27 @@
         <div class="row g-4">
             <div class="col-12">
                 <div class="bg-secondary rounded h-100 p-4">
-                    <h6 class="mb-4">News</h6>
+                    <h4 class="mb-4">News on the Page</h4>
                     <div class="table-responsive">
                         <table class="table table-borderless" id="news_tbl">
                             <thead>
                                 <tr>
-                                    <th scope="col">Heading</th>
-                                    <th scope="col">description</th>
-                                    <th scope="col" style="min-width: 150px">Upload Date</th>
-                                    <th scope="col" style="min-width: 150px">Cover Image</th>
-                                    <th scope="col" style="min-width: 95px">Action</th>
+                                    <th scope="col" style=" text-align:center">Heading</th>
+                                    <th scope="col" style=" text-align:center">Description</th>
+                                    <th scope="col" style="min-width: 150px ;text-align:center">Upload Date</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Cover Image</th>
+                                    <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($newsitems as $item)
                                     <tr style="background-color:#191C24">
                                         <td>{{ $item->heading }}</td>
-                                        <td>{{ $item->description }}</td>
+                                        <td style="text-align: justify" >{{ $item->description }}</td>
                                         <td>{{ $item->upload_date }}</td>
-                                        <td>{{ $item->cover }}</td>
+                                        <td style="text-align: center;">
+                                            <img src="{{ asset('uploads/'. $item->cover) }}" alt class="img img-responsive" style="width: 75%;height:75%">
+                                        </td>
                                         <td>
                                             <a href="{{ route('news.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Edit</button></a>
                                             <form method="POST" action="{{ url('/admin123/news' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">

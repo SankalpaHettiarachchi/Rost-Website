@@ -28,42 +28,49 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'heading' => 'required|string|max:100',
-            'description' => 'required|string|min:200|max:400',
-            'upload_date' => 'required|date',
-            'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'fb_link' => 'nullable|url',
-            'in_link' => 'nullable|url',
-        ]);
+            $request->validate([
+                'heading' => 'required|string|max:100',
+                'description' => 'required|string|min:200|max:400',
+                'upload_date' => 'required|date',
+                'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'fb_link' => 'nullable|url',
+                'in_link' => 'nullable|url',
+            ]);
 
-        if ($request->hasFile('cover')) {
-            $image = $request->file('cover');
-            $imageName = time() . '_' . $image->getClientOriginalName();
-            $image->move(public_path('uploads'), $imageName);
-
-            list($width, $height) = getimagesize(public_path('uploads/' . $imageName));
-
-            if ($width !== 1075 || $height !== 716) {
-
-                return back()->withInput()->withErrors('The cover image should be exactly 1075px x 716px .');
+            if ($request)
+            {
+                if ($request->hasFile('cover')) {
+                    $image = $request->file('cover');
+                    $imageName = time() . '_' . $image->getClientOriginalName();
+                    $image->move(public_path('uploads'), $imageName);
+        
+                    list($width, $height) = getimagesize(public_path('uploads/' . $imageName));
+        
+                    if ($width !== 1075 || $height !== 716) {
+        
+                        return back()->withInput()->withErrors('The cover image should be exactly 1075px x 716px .');
+                    }
+                }
+        
+                $heading = $request->input('heading');
+                $description = $request->input('description');
+        
+                $newsItem = new News([
+                    'heading' => $heading,
+                    'cover' => $imageName,
+                    'description' => $description,
+                    'upload_date' => $request->input('upload_date'),
+                    'fb_link' => $request->input('fb_link'),
+                    'in_link' => $request->input('in_link'),
+                ]);
+                $newsItem->save();
+                return redirect('/admin123/news');
+    
             }
-        }
-
-        // $heading = $request->input('heading');
-        // $description = $request->input('description');
-
-        // $newsItem = new News([
-        //     'heading' => $heading,
-        //     'cover' => $imageName,
-        //     'description' => $description,
-        //     'upload_date' => $request->input('upload_date'),
-        //     'fb_link' => $request->input('fb_link'),
-        //     'in_link' => $request->input('in_link'),
-        // ]);
-        // $newsItem->save();
-        return redirect('/admin123/news');
-
+            else
+            {
+                return redirect('/admin123/news');
+            }
     }
 
     public function show($id)
