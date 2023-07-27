@@ -88,20 +88,46 @@ class NewsController extends Controller
 
     public function update(Request $request, $id)
     {
-        $news = News::find($id);
-        $image = $request->file('cover');
-        $imageName = $image->getClientOriginalName();
-        $image->move(public_path('uploads'), $imageName);
-
-        $news->update
-        ([
-            'heading' => $request->input('heading'),
-            'cover' => $imageName,
-            'description' => $request->input('description'),
-            'upload_date' => $request->input('upload_date'),
-            'fb_link' => $request->input('fb_link'),
-            'in_link' => $request->input('in_link'),
+        $request->validate([
+            'heading' => 'required|string|max:100',
+            'description' => 'required|string|min:200|max:400',
+            'upload_date' => 'required|date',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'fb_link' => 'nullable|url',
+            'in_link' => 'nullable|url',
         ]);
+        if ($request)
+            {
+                
+                if ($request->hasFile('cover')) {
+                    $image = $request->file('cover');
+                    $imageName = time() . '_' . $image->getClientOriginalName();
+                    $image->move(public_path('uploads'), $imageName);
+        
+                    list($width, $height) = getimagesize(public_path('uploads/' . $imageName));
+        
+                    if ($width !== 1075 || $height !== 716) {
+        
+                        return back()->withInput()->withErrors('The cover image should be exactly 1075px x 716px .');
+                    }
+                }
+        
+                $news = News::find($id);
+
+                $news->update
+                ([
+                    'heading' => $request->input('heading'),
+                    'cover' => $imageName,
+                    'description' => $request->input('description'),
+                    'upload_date' => $request->input('upload_date'),
+                    'fb_link' => $request->input('fb_link'),
+                    'in_link' => $request->input('in_link'),
+                ]);
+            }
+            else
+            {
+                return redirect('/admin123/news');
+            }
 
         return redirect('/admin123/news');
     }
