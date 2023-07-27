@@ -10,39 +10,73 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-9 col-sm-12 blog-single-content">
-                    <div class="post">
-                        @if (isset($newsitems_top1) )
+                    @if (isset($newsitems_top1) )
+                        <div class="post">
                             <div class="media">
                                 <img src="{{ asset('uploads/'. $newsitems_top1->cover) }}" alt class="img img-responsive ">
                             </div>
                             <div class="post-title-meta">
                                 <h2>{{ isset($newsitems_top1) ? $newsitems_top1->heading : '' }}</h2>
                                 <ul>
-                                    <li><a href="#">21 feb, 2016</a></li>
+                                    <li style="color: #3b5998">{{ isset($newsitems_top1) ? \Carbon\Carbon::parse($newsitems_top1->upload_date)->format('Y F d') : '' }}<a href="#"></a></li>                                
                                 </ul>
                             </div>
                             <div class="post-body">
                                 <p>{{ isset($newsitems_top1) ? $newsitems_top1->description : '' }}</p>
                             </div>
-                        @else
-                            @foreach ($newsitems_top2 as $newsitem )
+                            <div class="share-post">
+                                <h2>{{ isset($newsitems_top2) ? $newsitem->heading : '' }}</h2>
+                                <ul>
+                                    <li>
+                                        <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button">
+                                            <i class="fa fa-linkedin"> </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                    @else
+                        @foreach ($newsitems_top2 as $newsitem )
+                            <div class="post">
                                 <div class="media">
                                     <img src="{{ asset('uploads/'. $newsitem->cover) }}" alt class="img img-responsive">
                                 </div>
                                 <div class="post-title-meta">
-                                    <h2>{{ isset($newsitems_top2) ? $newsitem->heading : '' }}</h2>
+                                    <h2>{{ isset($newsitems_top2) ? $newsitem->heading : '' }}</h2> 
                                     <ul>
-                                        <li><a href="#">21 feb, 2016</a></li>
-                                    </ul>
+                                        <li style="color: #3b5998">{{ isset($newsitems_top2) ? \Carbon\Carbon::parse($newsitem->upload_date)->format('Y F d') : '' }}<a href="#"></a></li>
+                                    </ul>                               
                                 </div>
                                 <div class="post-body">
                                     <p>{{ isset($newsitems_top2) ? $newsitem->description : '' }}</p>
-                                </div>   
-                            @endforeach
-                        @endif
-                    </div>
+                                </div>
+                            </div>
+                            <div class="share-post">
+                                <ul>
+                                    <li>
+                                        <a class="btn btn-primary" style="background-color: #3b5998;" href="{{ isset($newsitems_top2) ? $newsitem->fb_link : '' }}" role="button">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-primary" style="background-color: #0082ca;" href="{{ isset($newsitems_top2) ? $newsitem->in_link : '' }}" role="button">
+                                            <i class="fa fa-linkedin"> </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <br>
+                        @endforeach
+                    @endif
                 </div>
-                
                 <div class="col col-md-3 col-sm-5">
                     <div class="blog-sidebar">
                         <div class="widget recent-post-widget">

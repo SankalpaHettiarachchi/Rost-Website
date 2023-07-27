@@ -180,5 +180,6 @@
 
     <!-- Custom script for this template -->
     <script src="{{ asset('asset/js/script.js') }}"></script>
+
 </body>
 </html>

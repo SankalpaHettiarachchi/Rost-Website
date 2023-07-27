@@ -8334,3 +8334,9 @@ iframe{
   transform: translateX(-60px); /* Adjust the horizontal overlap distance for the third image */
   z-index: 3; /* Set a higher z-index for the third image to place it on top */
 }
+.share-post ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; 
+  justify-content: flex-end;
+}
