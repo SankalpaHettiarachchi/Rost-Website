@@ -939,7 +939,19 @@ function toggleSection(data) {
         [btnoverview, btnteam, btnvision].forEach(element => element.classList.remove("current"));
         [overview, team, vision].forEach(element => element.style.display = "none");
     }
-    
-
-    
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var gallery = document.querySelector(".gallery1");
+    var masonry = new Masonry(gallery, {
+      itemSelector: ".image-item",
+      columnWidth: ".col-lg-4",
+      gutter: 0,
+    });
+    $(".image-link").magnificPopup({
+        type: "image",
+        gallery: {
+          enabled: true
+        },
+      });
+  });

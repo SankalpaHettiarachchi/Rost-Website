@@ -12,6 +12,7 @@ class AlbumController extends Controller
         $albums = Albums::all();
         return view('admin.albums')->with('albums', $albums);
     }
+
     public function index_site()
     {
         $albums = Albums::all();
@@ -21,7 +22,8 @@ class AlbumController extends Controller
     {
         $albums = Albums::all();
         $album_images = Image::where('album_id', $id)->get();
-        return view('site.albums', compact('album_images',$album_images))->with('albums', $albums);
+        $album_name = Albums::where('id', $id)->first();
+        return view('site.albums', compact('album_images',$album_images))->with('albums', $albums)->with('album_name',$album_name);
     }
 
     public function store(Request $request)

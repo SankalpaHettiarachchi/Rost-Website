@@ -38,6 +38,15 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
 
+    <!-- Include Masonry library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    
+    <!-- Include Magnific Popup library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+
 </head>
 
 <body>
