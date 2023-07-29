@@ -4,6 +4,8 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MessagesController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 // ---------------AdminRoutes---------------
 Route::get('/admin123/home', function () {
     return view('admin.dashboard');
@@ -24,34 +27,13 @@ Route::get('/admin123/users', function () {
     return view('admin.users');
 })->name('admin_users');
 
-// Route::get('/admin123/news', function () {
-//     return view('admin.news');
-// })->name('admin_news');
 
-// Route::get('/admin123/albums', function () {
-//     return view('admin.albums');
-// })->name('admin_albums');
-
-// Route::get('/admin123/messages', function () {
-//     return view('admin.messages');
-// })->name('admin_messages');
-
-Route::resource('/admin123/albums', AlbumController::class);
-Route::resource('/admin123/news', NewsController::class);
-Route::resource('/admin123/messages', MessagesController::class);
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::prefix('/admin123')->group(function()
+{
+    Route::resource('/albums', AlbumController::class);
+    Route::resource('/news', NewsController::class);
+    Route::resource('/messages', MessagesController::class);
+});
 
 
 
@@ -66,14 +48,6 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('site.about');
 })->name('about');
-
-// Route::get('/news', function () {
-//     return view('site.news');
-// })->name('news');
-
-Route::get('/albums', function () {
-    return view('site.albums');
-})->name('albums');
 
 Route::get('/contact', function () {
     return view('site.contact');

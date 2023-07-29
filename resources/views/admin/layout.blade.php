@@ -32,6 +32,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>
@@ -50,8 +53,8 @@
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST-ADMIN</h3>
                 </a>
                 <div class="navbar-nav w-100">
-                    <a href="{{ route('admin') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
-                    <a href="{{ route('admin_users') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
                     <a href="{{ url('/admin123/news') }}" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>News</a>
                     <a href="{{ url('/admin123/albums') }}" class="nav-item nav-link active"><i class="fa fa-images me-2"></i>Albums</a>
                     <a href="{{ url('/admin123/messages') }}" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>Messages</a>
@@ -69,13 +72,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{{ asset('admin/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                            
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
-                        </div>
                     </div>
                 </div>
             </nav>
