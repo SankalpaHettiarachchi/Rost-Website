@@ -363,33 +363,33 @@
                         <h2>Register Here </h2>
                         <hr>
                         <div class="job-search-form">
-                            <form class="form">
+                            <form class="form" action="{{ url('about/student') }}" method="POST">
+                                @csrf
                                 <div>
                                     <div>
                                         <label>First Name</label>
-                                        <input type="text" class="form-control" placeholder="Ex : John">
+                                        <input type="text"  name="f_name" class="form-control" placeholder="Ex : John">
                                     </div>
                                     <div>
                                         <label>Email Address (University)</label>
-                                        <input type="text" class="form-control" placeholder="@tec.rjt.ac.lk">
+                                        <input type="text" name="email" class="form-control" placeholder="@tec.rjt.ac.lk">
                                     </div>
                                 </div>
                                 <div>
                                     <div>
                                         <label>Last Name</label>
-                                        <input type="text" class="form-control" placeholder="Ex : Smith">
+                                        <input type="text" name="l_name" class="form-control" placeholder="Ex : Smith">
                                     </div>
                                     <div>
                                         <label>Contact No</label>
-                                        <input type="text" class="form-control" placeholder="+94 XXXX XXXXX">
+                                        <input type="text" name="contact_no" class="form-control" placeholder="+94 XXXX XXXXX">
                                     </div>
                                 </div> 
                                 <div>
-                                    <button type="submit"  style="margin-top:100px;">Regster</button>
+                                    <button class="" type="submit" style="margin:100px 50px 50px 125px;">Regster</button>
                                 </div>
                             </form>
                         </div>
-
                         <div class="filter-row">
                             <div class="pagi">
                                 <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
@@ -397,7 +397,6 @@
                                 <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
-
                         <div class="job-lists">
                             <div class="job">
                                 <div class="left-col">
@@ -425,8 +424,8 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
+                </div>
+            </div>
         </section>
     </div>
 @endsection

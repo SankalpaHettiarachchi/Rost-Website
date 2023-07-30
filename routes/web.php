@@ -4,6 +4,7 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -58,4 +59,6 @@ Route::get('/news/{id}',[NewsController::class, 'news_click'])->name('news.click
 
 Route::get('/albums', [AlbumController::class, 'index_site']);
 Route::get('/albums/{id}',[AlbumController::class, 'see_all'])->name('albums.click');
+
+Route::resource('/about/student', StudentController::class);
 
