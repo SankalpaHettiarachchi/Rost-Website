@@ -53,8 +53,8 @@
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST-ADMIN</h3>
                 </a>
                 <div class="navbar-nav w-100">
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
+                    <a href="{{ url('/admin123/dashboard') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
+                    <a href="{{ url('/admin123/users') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
                     <a href="{{ url('/admin123/news') }}" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>News</a>
                     <a href="{{ url('/admin123/albums') }}" class="nav-item nav-link active"><i class="fa fa-images me-2"></i>Albums</a>
                     <a href="{{ url('/admin123/messages') }}" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>Messages</a>

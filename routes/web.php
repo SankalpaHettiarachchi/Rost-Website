@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,17 +21,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ---------------AdminRoutes---------------
-Route::get('/admin123/home', function () {
-    return view('admin.dashboard');
-})->name('admin');
-
-Route::get('/admin123/users', function () {
-    return view('admin.users');
-})->name('admin_users');
-
 
 Route::prefix('/admin123')->group(function()
 {
+    Route::resource('/dashboard', DashboardController::class);
+    Route::resource('/users', UsersController::class);
     Route::resource('/albums', AlbumController::class);
     Route::resource('/news', NewsController::class);
     Route::resource('/messages', MessagesController::class);
