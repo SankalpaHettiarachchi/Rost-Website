@@ -83,7 +83,7 @@
                 <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                     <button class="close-navbar"><i class="fa fa-close"></i></button>
                     <ul class="nav navbar-nav">
-                        <li class="{{ request()->is('/') ? 'current-menu-parent' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                        {{-- <li class="{{ request()->is('/') ? 'current-menu-parent' : '' }}"><a href="{{ route('home') }}">Home</a></li> --}}
                         <li class="{{ request()->is('about') ? 'current-menu-parent' : '' }}"><a href="{{ route('about') }}">About</a></li>
                         <li class="{{ request()->is('news') ? 'current-menu-parent' : '' }}"><a href="{{ url('/news') }}">News</a></li>
                         <li class="{{ request()->is('albums') ? 'current-menu-parent' : '' }}"><a href="{{ url('/albums') }}">Albums</a></li>

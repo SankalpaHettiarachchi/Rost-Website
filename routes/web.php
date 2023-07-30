@@ -22,8 +22,12 @@ use Illuminate\Support\Facades\Auth;
 
 // ---------------AdminRoutes---------------
 
-Route::prefix('/admin123')->group(function()
+Auth::routes();
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth']);
+
+Route::middleware(['auth'])->prefix('/admin123')->group(function()
 {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UsersController::class);
     Route::resource('/albums', AlbumController::class);
@@ -37,9 +41,9 @@ Route::prefix('/admin123')->group(function()
 
 // ---------------UserRoutes---------------
 
-Route::get('/', function () {
-    return view('site.index');
-})->name('home');
+// Route::get('/', function () {
+//     return view('site.index');
+// })->name('home');
 
 Route::get('/about', function () {
     return view('site.about');
@@ -54,5 +58,4 @@ Route::get('/news/{id}',[NewsController::class, 'news_click'])->name('news.click
 
 Route::get('/albums', [AlbumController::class, 'index_site']);
 Route::get('/albums/{id}',[AlbumController::class, 'see_all'])->name('albums.click');
-
 
