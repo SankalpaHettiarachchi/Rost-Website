@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 // ---------------AdminRoutes---------------
 
 Auth::routes();
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'logout']);
 
 Route::middleware(['auth'])->prefix('/admin123')->group(function()
 {
