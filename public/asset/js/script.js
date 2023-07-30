@@ -903,11 +903,13 @@ function toggleSection(data) {
     var team = document.getElementById("team");
     var vision = document.getElementById("vision");
     var mission = document.getElementById("mission");
+    var career = document.getElementById("career");
 
     var btnoverview = document.getElementById("btnoverview");
     var btnvision = document.getElementById("btnvision");
     var btnmision = document.getElementById("btnmision");
     var btnteam = document.getElementById("btnteam");
+    var btncareer = document.getElementById("btncareer");
 
     const section_data = data.dataset.section;
 
@@ -915,29 +917,35 @@ function toggleSection(data) {
     {
         overview.style.display = "block";
         btnoverview.classList.add("current");
-        [btnteam, btnvision, btnmision].forEach(element => element.classList.remove("current"));
-        [team, vision, mission].forEach(element => element.style.display = "none");
+        [btncareer,btnteam, btnvision, btnmision].forEach(element => element.classList.remove("current"));
+        [career,team, vision, mission].forEach(element => element.style.display = "none");
     }
     else if(section_data == "team")
     {
         team.style.display = "block";
         btnteam.classList.add("current");
-        [btnoverview, btnvision, btnmision].forEach(element => element.classList.remove("current"));
-        [overview, vision, mission].forEach(element => element.style.display = "none");
+        [btncareer,btnoverview, btnvision, btnmision].forEach(element => element.classList.remove("current"));
+        [career,overview, vision, mission].forEach(element => element.style.display = "none");
     }
     else if(section_data == "vision")
     {
         vision.style.display = "block";
         btnvision.classList.add("current");
-        [btnoverview, btnteam, btnmision].forEach(element => element.classList.remove("current"));
-        [overview, team,mission].forEach(element => element.style.display = "none");
+        [btncareer,btnoverview, btnteam, btnmision].forEach(element => element.classList.remove("current"));
+        [career,overview, team,mission].forEach(element => element.style.display = "none");
     }
     else if(section_data == "mission")
     {
         mission.style.display = "block";
         btnmision.classList.add("current");
-        [btnoverview, btnteam, btnvision].forEach(element => element.classList.remove("current"));
-        [overview, team, vision].forEach(element => element.style.display = "none");
+        [btncareer,btnoverview, btnteam, btnvision].forEach(element => element.classList.remove("current"));
+        [career,overview, team, vision].forEach(element => element.style.display = "none");
+    }else if(section_data == "career")
+    {
+        career.style.display = "block";
+        btncareer.classList.add("current");
+        [btnmision,btnoverview, btnteam, btnvision].forEach(element => element.classList.remove("current"));
+        [mission,overview, team, vision].forEach(element => element.style.display = "none");
     }
 }
 

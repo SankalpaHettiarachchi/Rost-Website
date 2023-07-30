@@ -20,6 +20,7 @@
                             <li id="btnteam" data-section="team" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Team</a></li>
                             <li id="btnmision" data-section="mission" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Mission</a></li>
                             <li id="btnvision" data-section="vision" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Vision</a></li>
+                            <li id="btncareer" data-section="career" onclick="toggleSection(this)"><a href="#" onclick="event.preventDefault();">Career</a></li>
                         </ul>
                     </div>
                 </div>
@@ -352,6 +353,80 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- start of career-section -->        
+        <section id ="career" style ="display: none;" class="careers-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-10 col-lg-offset-1">
+                        <h2>Register Here </h2>
+                        <hr>
+                        <div class="job-search-form">
+                            <form class="form">
+                                <div>
+                                    <div>
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" placeholder="Ex : John">
+                                    </div>
+                                    <div>
+                                        <label>Email Address (University)</label>
+                                        <input type="text" class="form-control" placeholder="@tec.rjt.ac.lk">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Ex : Smith">
+                                    </div>
+                                    <div>
+                                        <label>Contact No</label>
+                                        <input type="text" class="form-control" placeholder="+94 XXXX XXXXX">
+                                    </div>
+                                </div> 
+                                <div>
+                                    <button type="submit"  style="margin-top:100px;">Regster</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="pagi">
+                                <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
+                                <span>1 of 3 </span>
+                                <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="job-lists">
+                            <div class="job">
+                                <div class="left-col">
+                                    <div class="job-header">
+                                        <h3><a href="#">How to be a member</a></h3>
+                                        <span class="date"></span>
+                                    </div>
+                                    <div class="job-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                    <div class="job-footer">
+                                        <ul>
+                                            <li><i class="fa fa-map-marker"></i> Portland, OR</li>
+                                            <li>Mega Industry, LLC</li>
+                                            <li>Production</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="right-col">
+                                    <div class="apply-share">
+                                        <a href="#">Register Now</a>
+                                        <a href="#"><i class="fa fa-share-square"></i> Admin Request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
         </section>
     </div>
 @endsection
