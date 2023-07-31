@@ -21,11 +21,12 @@ class HomeController extends Controller
 
     public function index()
     {
+        Session::flush();
         return view('admin.dashboard');
     }
     public function logout(Request $request)
     {
-        Auth::logout();
+        Session::flush();
         return redirect('/admin123/dashboard');
     }
 

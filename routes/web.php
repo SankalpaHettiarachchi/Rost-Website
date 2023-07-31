@@ -24,13 +24,12 @@ use Illuminate\Support\Facades\Auth;
 // ---------------AdminRoutes---------------
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout')->middleware('backprevent');
+Route::middleware(['backprevent'])->get('/admin123/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('/admin/dashboard');
+Route::middleware(['backprevent'])->post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
 
-Route::middleware(['auth'])->prefix('/admin123')->group(function()
+Route::middleware(['auth','backprevent'])->prefix('/admin123')->group(function()
 {
-    // Route::get('/logout',HomeController::class);
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UsersController::class);
     Route::resource('/albums', AlbumController::class);
@@ -40,13 +39,11 @@ Route::middleware(['auth'])->prefix('/admin123')->group(function()
 
 
 
-
-
 // ---------------UserRoutes---------------
 
-// Route::get('/', function () {
-//     return view('site.index');
-// })->name('home');
+Route::get('', function () {
+    return view('site.index');
+})->name('home');
 
 Route::get('/about', function () {
     return view('site.about');
