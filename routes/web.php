@@ -28,6 +28,7 @@ Route::middleware(['backprevent'])->get('/admin123/dashboard', [App\Http\Control
 Route::middleware(['backprevent'])->post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
 
+
 Route::middleware(['auth','backprevent'])->prefix('/admin123')->group(function()
 {
     Route::resource('/dashboard', DashboardController::class);

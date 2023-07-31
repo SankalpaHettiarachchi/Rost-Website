@@ -16,19 +16,20 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','backprevent']);
     }
 
     public function index()
     {
+        Auth::login();
         Session::flush();
         return view('admin.dashboard');
     }
     public function logout(Request $request)
     {
+        Auth::logout();
         Session::flush();
         return redirect('/admin123/dashboard');
     }
-
 
 }
