@@ -2,9 +2,44 @@
 
 @section('content')
     <div class="container-fluid pt-4 px-4">
-        <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
-            <div class="col-md-6 text-center">
-                <h3>This is blank page - Users</h3>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h4 class="mb-4">Registered Students</h4>
+                    <div class="table-responsive">
+                        <table class="table" id="news_tbl">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style=" text-align:center">First Name</th>
+                                    <th scope="col" style=" text-align:center">Last Name</th>
+                                    <th scope="col" style="min-width: 150px ;text-align:center">Contact No</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Email</th>
+                                    <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($students as $student)
+                                    <tr style="background-color:#191C24">
+                                        <td>{{ $student->f_name }}</td>
+                                        <td style="text-align: justify" >{{ $student->l_name }}</td>
+                                        <td>{{ $student->contact_no }}</td>
+                                        <td>{{ $student->email }}</td>
+                                        <td>
+                                            <a href="{{ route('news.show', $student->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Send Email</button></a>
+                                            <form method="POST" action="{{ url('/admin123/users' . '/' . $student->id) }}" accept-charset="UTF-8" style="display:inline">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                                                </button>
+                                            </form>                                
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>   

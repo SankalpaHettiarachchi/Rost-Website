@@ -20,4 +20,10 @@ $(document).ready(function() {
         paging: true,        // Enable pagination
         "lengthMenu": [[1, -1], [1, "All"]],
     });
+    $('#std_tbl').DataTable({
+        order: [[0, 'asc']], // Sort the first column in ascending order by default
+        searching: true,     // Enable searching/filtering
+        paging: true,        // Enable pagination
+        "lengthMenu": [[1, -1], [1, "All"]],
+    });
 });
