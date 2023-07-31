@@ -24,11 +24,13 @@ use Illuminate\Support\Facades\Auth;
 // ---------------AdminRoutes---------------
 
 Auth::routes();
-Route::get('/', [App\Http\Controllers\HomeController::class, 'logout']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout')->middleware('backprevent');
+
 
 Route::middleware(['auth'])->prefix('/admin123')->group(function()
 {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/logout',HomeController::class);
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UsersController::class);
     Route::resource('/albums', AlbumController::class);

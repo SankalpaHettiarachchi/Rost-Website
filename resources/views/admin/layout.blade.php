@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {{ str_replace('_', '-', app()->getLocale()) }}>
 
 <head>
     <meta charset="utf-8">
@@ -33,8 +33,8 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
@@ -78,8 +78,8 @@
                                 {{ Auth::user()->name }}
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -135,6 +135,15 @@
     <!-- Template Javascript -->
     <script src="{{ asset('admin/js/main.js') }}"></script>
     <script src="{{ asset('admin/js/custom.js') }}"></script>
+    {{-- <script>
+        // Check if the page should be refreshed (set by the HomeController)
+        @if(session('refresh'))
+            setTimeout(() => 
+            {
+                window.location.reload();
+            }); 
+        @endif
+    </script> --}}
 </body>
 
 </html>

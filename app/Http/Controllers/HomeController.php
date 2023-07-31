@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 
 class HomeController extends Controller
 {
@@ -16,17 +19,15 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         return view('admin.dashboard');
     }
-    public function logout()
+    public function logout(Request $request)
     {
-        return redirect('/home');
+        Auth::logout();
+        return redirect('/admin123/dashboard');
     }
+
+
 }

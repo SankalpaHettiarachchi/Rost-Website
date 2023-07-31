@@ -360,7 +360,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-10 col-lg-offset-1">
-                        <h2>Register Here </h2>
+                        <div class="filter-row">
+                            <div class="pagi">
+                                <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
+                                <span>1 of 3 </span>
+                                <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="job-lists">
+                            <div class="job">
+                                <div class="col">
+                                    <div class="job-header">
+                                        <h3><a href="#">How to be a member</a></h3>
+                                        <span class="date"></span>
+                                    </div>
+                                    <div class="job-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                    <div class="job-footer">
+                                        <ul>
+                                            <li><i class="fa fa-map-marker"></i> Faculty of Technology, Rajarata University of Sri Lanka</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h3>Register Here </h3>
                         <hr>
                         <div class="job-search-form">
                             <form class="form" action="{{ url('about/student') }}" method="POST">
@@ -386,42 +412,9 @@
                                     </div>
                                 </div> 
                                 <div>
-                                    <button class="" type="submit" style="margin:100px 50px 50px 125px;">Regster</button>
+                                    <button class="" type="submit">Regster Now</button>
                                 </div>
                             </form>
-                        </div>
-                        <div class="filter-row">
-                            <div class="pagi">
-                                <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
-                                <span>1 of 3 </span>
-                                <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="job-lists">
-                            <div class="job">
-                                <div class="left-col">
-                                    <div class="job-header">
-                                        <h3><a href="#">How to be a member</a></h3>
-                                        <span class="date"></span>
-                                    </div>
-                                    <div class="job-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                    <div class="job-footer">
-                                        <ul>
-                                            <li><i class="fa fa-map-marker"></i> Portland, OR</li>
-                                            <li>Mega Industry, LLC</li>
-                                            <li>Production</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="right-col">
-                                    <div class="apply-share">
-                                        <a href="#">Register Now</a>
-                                        <a href="#"><i class="fa fa-share-square"></i> Admin Request</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
