@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Students;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -15,7 +16,8 @@ class UsersController extends Controller
     public function index()
     {
         $students = Students::all();
-        return view('admin.users', compact('students'));
+        $admins = User::all();
+        return view('admin.users', compact('students'))->with('admins',$admins);
     }
 
     public function create()
@@ -48,6 +50,14 @@ class UsersController extends Controller
         $student = Students::find($id);
 
         $student->delete();
+
+        return redirect('/admin123/users');
+    }
+    public function admin_destroy($id)
+    {
+        $User = User::find($id);
+
+        $User->delete();
 
         return redirect('/admin123/users');
     }

@@ -5,9 +5,49 @@
         <div class="row g-4">
             <div class="col-12">
                 <div class="bg-secondary rounded h-100 p-4">
+                    <h4 class="mb-4">Page Admins</h4>
+                    <div class="table-responsive">
+                        <table class="table" id="admin_tbl">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style=" text-align:center">Name</th>
+                                    <th scope="col" style="min-width: 100px ;text-align:center">Email</th>
+                                    <th scope="col" style="min-width: 95px ;text-align:center">Role</th>
+                                    <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($admins as $admin)
+                                    <tr style="background-color:#191C24">
+                                        <td>{{ $admin->name }}</td>
+                                        <td style="text-align: justify" >{{ $admin->email }}</td>
+                                        <td style="text-align: justify" >{{ $admin->role === 1 ? 'admin' : 'not admin' }}</td>
+                                        <td>
+                                            <a href="" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Accept</button></a>
+                                            <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
+                                                </button>
+                                            </form>                                
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                    <br>
+                    <hr>
+                    <br>
+                    <hr>
+                    <br>
+                    <hr>
+                    <br>
                     <h4 class="mb-4">Registered Students</h4>
                     <div class="table-responsive">
-                        <table class="table" id="news_tbl">
+                        <table class="table" id="std_tbl">
                             <thead>
                                 <tr>
                                     <th scope="col" style=" text-align:center">First Name</th>
