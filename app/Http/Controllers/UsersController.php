@@ -61,4 +61,19 @@ class UsersController extends Controller
 
         return redirect('/admin123/users');
     }
+    public function admin_make($id)
+    {
+        
+        $User = User::find($id);
+
+        if ($User) 
+        {
+            $User->update
+            ([
+                'role' => '1',
+            ]);
+        }
+
+        return redirect('/admin123/users');
+    }
 }

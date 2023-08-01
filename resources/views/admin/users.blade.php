@@ -13,7 +13,9 @@
                                     <th scope="col" style=" text-align:center">Name</th>
                                     <th scope="col" style="min-width: 100px ;text-align:center">Email</th>
                                     <th scope="col" style="min-width: 95px ;text-align:center">Role</th>
-                                    <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
+                                    @if(auth()->user()->s_role === 1)
+                                        <th scope="col" style="min-width: 95px ;text-align:center">Action</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -21,16 +23,42 @@
                                     <tr style="background-color:#191C24">
                                         <td>{{ $admin->name }}</td>
                                         <td style="text-align: justify" >{{ $admin->email }}</td>
-                                        <td style="text-align: justify" >{{ $admin->role === 1 ? 'admin' : 'not admin' }}</td>
-                                        <td>
-                                            <a href="" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Accept</button></a>
-                                            <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
-                                                    <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
-                                                </button>
-                                            </form>                                
+                                        <td style="text-align: justify" >
+                                            @if ($admin->s_role === 1 && $admin->role === 1)
+                                                Super Admin
+                                            @elseif ($admin->s_role === 0 && $admin->role === 1)
+                                                Admin
+                                            @else
+                                                Not Admin
+                                            @endif
+                                        </td>
+                                        <td style="text-align: justify" >
+                                            @if(auth()->user()->s_role === 1)
+                                                @if ($admin->role === 0 )
+                                                    <form method="POST" action="{{ route('admin.make', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
+                                                        {{ method_field('PATCH') }}
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-success btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i> Accept
+                                                        </button>
+                                                    </form>
+                                                    <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
+                                                        {{ method_field('DELETE') }}
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
+                                                        </button>
+                                                    </form>     
+                                                @elseif ($admin->s_role === 0 && $admin->role === 1)  
+                                                    <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
+                                                        {{ method_field('DELETE') }}
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
+                                                        </button>
+                                                    </form>
+                                                @endif
+                                            @endif                  
                                         </td>
                                     </tr>
                                 @endforeach

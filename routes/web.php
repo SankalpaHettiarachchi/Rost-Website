@@ -27,6 +27,8 @@ Auth::routes();
 Route::middleware(['backprevent'])->get('/admin123/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('/admin/dashboard');
 Route::middleware(['backprevent'])->post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::delete('/admin123/users/destroy/{id}', [App\Http\Controllers\UsersController::class, 'admin_destroy'])->name('admin.destroy');
+Route::patch('/admin123/users/admin_make/{id}', [App\Http\Controllers\UsersController::class, 'admin_make'])->name('admin.make');
+
 
 
 
