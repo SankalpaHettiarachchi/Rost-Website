@@ -29,7 +29,7 @@ Route::middleware(['backprevent'])->post('/logout', [App\Http\Controllers\HomeCo
 
 
 
-Route::middleware(['auth','backprevent'])->prefix('/admin123')->group(function()
+Route::middleware(['auth','backprevent','IsAdmin'])->prefix('/admin123')->group(function()
 {
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UsersController::class);
