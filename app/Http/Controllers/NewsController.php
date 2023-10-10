@@ -30,9 +30,9 @@ class NewsController extends Controller
     {
             $request->validate([
                 'heading' => 'required|string|max:100',
-                'description' => 'required|string|min:200|max:400',
+                'description' => 'required|string',
                 'upload_date' => 'required|date',
-                'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'cover' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'fb_link' => 'nullable|url',
                 'in_link' => 'nullable|url',
             ]);
@@ -89,10 +89,10 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'heading' => 'required|string|max:100',
-            'description' => 'required|string|min:200|max:400',
+            'heading' => 'required|string',
+            'description' => 'required|string|min:200',
             'upload_date' => 'required|date',
-            'cover' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif',
             'fb_link' => 'nullable|url',
             'in_link' => 'nullable|url',
         ]);

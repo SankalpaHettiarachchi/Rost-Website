@@ -29,10 +29,10 @@ class AlbumController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'al_name' => 'required|string|max:100',
+            'al_name' => 'required|string',
             'al_date' => 'required|date',
-            'al_description' => 'required|string|min:50|max:200',
-            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'al_description' => 'required|string',
+            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif'
         ]);
         if($request)
         {
@@ -84,10 +84,10 @@ class AlbumController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'al_name' => 'required|string|max:100',
+            'al_name' => 'required|string',
             'al_date' => 'required|date',
-            'al_description' => 'required|string|min:50|max:200',
-            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'al_description' => 'required|string|min:50',
+            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif'
         ]);
         if($request)
         {
