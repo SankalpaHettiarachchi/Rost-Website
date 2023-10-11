@@ -1,6 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Albums;
+use App\Models\Image;
+use App\Models\News;
+use App\Models\User;
+use App\Models\Students;
+use App\Models\Messages;
+
+
+
 
 use Illuminate\Http\Request;
 
@@ -13,7 +22,24 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $news_count = News::count();
+        $admins_count = User::count(); 
+        $albums_count = Albums::count();
+        $students_count = Students::count();
+        $admins_pending_Count = User::where('role', 0)->count();
+        $messages_count = Messages::count();
+
+
+        // dd($news_count,$admins_count,$albums_count,$students_count);
+
+        return view('admin.dashboard', [
+            'news_count' => $news_count,
+            'admins_count' => $admins_count,
+            'albums_count' => $albums_count,
+            'students_count' => $students_count,
+            'admins_pending_Count' => $admins_pending_Count,
+            'messages_count' => $messages_count,
+        ]);
     }
 
     /**
