@@ -22,7 +22,7 @@ class Isadmin
         if(!Auth()->check() || !Auth()->User()->role)
         {
             Auth::logout();
-            abort(code:403);
+            return response()->view('admin.error', [], 403);
         }
         return $next($request);
     }

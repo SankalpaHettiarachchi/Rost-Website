@@ -28,19 +28,17 @@ Route::middleware(['backprevent'])->get('/admin123/dashboard', [App\Http\Control
 Route::middleware(['backprevent'])->post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::delete('/admin123/users/destroy/{id}', [App\Http\Controllers\UsersController::class, 'admin_destroy'])->name('admin.destroy');
 Route::patch('/admin123/users/admin_make/{id}', [App\Http\Controllers\UsersController::class, 'admin_make'])->name('admin.make');
-
-
-
+Route::view('/home','site.index');
 
 Route::middleware(['auth','IsAdmin','backprevent'])->prefix('/admin123')->group(function()
 {
+    Route::view('/error', 'admin.error');
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UsersController::class);
     Route::resource('/albums', AlbumController::class);
     Route::resource('/news', NewsController::class);
     Route::resource('/messages', MessagesController::class);
 });
-
 
 
 // ---------------UserRoutes---------------
