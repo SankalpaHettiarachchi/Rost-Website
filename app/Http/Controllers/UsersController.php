@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Students;
 use App\Models\User;
+use App\Events\Admin_accept;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -72,6 +73,7 @@ class UsersController extends Controller
             ([
                 'role' => '1',
             ]);
+            event(new Admin_accept($User));
         }
 
         return redirect('/admin123/users');
