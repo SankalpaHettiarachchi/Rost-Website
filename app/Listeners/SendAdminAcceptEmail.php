@@ -21,7 +21,7 @@ class SendAdminAcceptEmail
     {
         // Access the user from the event
         $user = $event->user;
-
+        
         // Send the email
         Mail::to($user->email)->send(new Accept_Admin_Email($user));
     }

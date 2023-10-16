@@ -23,7 +23,7 @@ class Accept_Admin_Email extends Mailable
      */
     public function __construct(User $user)
     {
-        $this->$user = $user;
+        $this->user = $user;
     }
 
     public function build()

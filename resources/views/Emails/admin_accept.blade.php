@@ -1,4 +1,4 @@
 
-Hello {{ $user }},
+Hello {{ $user->name }},
 
-You have been accepted as an admin. Please login using your email address: {{ $user }}
+You have been accepted as an admin. Please login using your email address: {{ $user->email }}
