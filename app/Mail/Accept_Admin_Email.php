@@ -13,6 +13,8 @@ use App\Models\User;
 class Accept_Admin_Email extends Mailable
 {
     use Queueable, SerializesModels;
+    
+    public $user;
 
     /**
      * Create a new message instance.
@@ -24,43 +26,12 @@ class Accept_Admin_Email extends Mailable
         $this->$user = $user;
     }
 
-    /**
-     * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
-     */
-    public function envelope()
-    {
-        return new Envelope(
-            subject: 'Rost Super Admin',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
-     */
-    public function content()
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array
-     */
-    public function attachments()
-    {
-        return [];
-    }
-
     public function build()
     {
-        return $this->from('Rost Super Admin', 'ROST')
-                    ->view('emails.admin_accept');
+        return $this->subject('Admin Accepted')
+                    ->view('emails.admin_accept')
+                    ->with([
+                        'user' => $this->user,
+                    ]);
     }
 }

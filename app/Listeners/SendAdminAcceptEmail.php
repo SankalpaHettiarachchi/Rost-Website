@@ -19,11 +19,10 @@ class SendAdminAcceptEmail
      */
     public function handle(Admin_accept $event)
     {
-        dd("Listner Called");
         // Access the user from the event
         $user = $event->user;
 
         // Send the email
-        // Mail::to($user->email)->send(new Accept_Admin_Email($user));
+        Mail::to($user->email)->send(new Accept_Admin_Email($user));
     }
 }
