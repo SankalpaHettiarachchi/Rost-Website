@@ -20,7 +20,8 @@ class Admin_accept
      */
     public function __construct(User $user)
     {
-        $this->$user = $user;
+        $this->user = $user;
+        
     }
 
 }

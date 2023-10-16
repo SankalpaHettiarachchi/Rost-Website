@@ -1,24 +1,16 @@
 <?php
 
 namespace App\Listeners;
-use Illuminate\Support\Facades\Mail;
 
 use App\Events\Admin_accept;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\Accept_Admin_Email;
-
 
 class SendAdminAcceptEmail
 {
-    /**
-     * Create the event listener.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
+    
     /**
      * Handle the event.
      *
@@ -27,10 +19,11 @@ class SendAdminAcceptEmail
      */
     public function handle(Admin_accept $event)
     {
+        dd("Listner Called");
         // Access the user from the event
         $user = $event->user;
 
         // Send the email
-        Mail::to($user->email)->send(new Accept_Admin_Email($user));
+        // Mail::to($user->email)->send(new Accept_Admin_Email($user));
     }
 }

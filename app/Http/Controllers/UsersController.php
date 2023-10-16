@@ -69,13 +69,12 @@ class UsersController extends Controller
 
         if ($User) 
         {
-            $User->update
+            $User->update 
             ([
                 'role' => '1',
             ]);
-            event(new Admin_accept($User));
         }
-
+        event(new Admin_accept($User));
         return redirect('/admin123/users');
     }
 }
