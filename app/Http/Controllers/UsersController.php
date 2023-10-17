@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Students;
 use App\Models\User;
 use App\Events\Admin_accept;
+use App\Events\Admin_remove;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -60,6 +61,7 @@ class UsersController extends Controller
 
         $User->delete();
 
+        event(new Admin_remove($User));
         return redirect('/admin123/users');
     }
     public function admin_make($id)

@@ -19,7 +19,10 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\Admin_accept' => [
             'App\Listeners\SendAdminAcceptEmail'
-        ]
+        ],
+        'App\Events\Admin_remove' => [
+            'App\Listeners\AdminRemoveEmail'
+        ],
     ];
 
     /**
