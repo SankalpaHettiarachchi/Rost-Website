@@ -6,6 +6,7 @@ use App\Models\Students;
 use App\Models\User;
 use App\Events\Admin_accept;
 use App\Events\Admin_remove;
+use App\Events\Student_Removed;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -50,16 +51,15 @@ class UsersController extends Controller
     public function destroy($id)
     {
         $student = Students::find($id);
-
         $student->delete();
 
+        event(new Student_Removed($student));
         return redirect('/admin123/users');
     }
     
     public function admin_destroy($id)
     {
         $User = User::find($id);
-
         $User->delete();
 
         event(new Admin_remove($User));
@@ -77,6 +77,7 @@ class UsersController extends Controller
                 'role' => '1',
             ]);
         }
+        
         event(new Admin_accept($User));
         return redirect('/admin123/users');
     }

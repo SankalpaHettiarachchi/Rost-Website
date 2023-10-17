@@ -26,6 +26,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Student_Registerd' => [
             'App\Listeners\Student_Registerd_Email'
         ],
+        'App\Events\Student_Removed' => [
+            'App\Listeners\Student_Removed_Email'
+        ],
     ];
 
     /**
