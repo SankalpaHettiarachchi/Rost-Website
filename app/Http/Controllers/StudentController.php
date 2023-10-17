@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Students;
+use App\Events\Student_Registerd;
+
 
 class StudentController extends Controller
 {
@@ -36,6 +38,7 @@ class StudentController extends Controller
                     'contact_no' => $contact_no,
                 ]);
                 $student->save();
+                event(new Student_Registerd($student));
                 return back()->withInput();
     
             }

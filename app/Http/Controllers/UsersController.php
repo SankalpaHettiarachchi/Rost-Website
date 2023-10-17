@@ -55,6 +55,7 @@ class UsersController extends Controller
 
         return redirect('/admin123/users');
     }
+    
     public function admin_destroy($id)
     {
         $User = User::find($id);
