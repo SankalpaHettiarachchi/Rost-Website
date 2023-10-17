@@ -11,7 +11,6 @@ use App\Mail\Student_Registered_Email;
 
 class Student_Registerd_Email
 {
-    
     /**
      * Handle the event.
      *

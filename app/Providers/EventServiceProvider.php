@@ -23,7 +23,7 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Admin_remove' => [
             'App\Listeners\AdminRemoveEmail'
         ],
-        'App\Events\Student_Regiterd' => [
+        'App\Events\Student_Registerd' => [
             'App\Listeners\Student_Registerd_Email'
         ],
     ];

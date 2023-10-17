@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Students;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -20,7 +21,7 @@ class Student_Registered_Email extends Mailable
      *
      * @return void
      */
-    public function __construct(User $student)
+    public function __construct(Students $student)
     {
         $this->student = $student;
     }
@@ -28,7 +29,7 @@ class Student_Registered_Email extends Mailable
     public function build()
     {
         return $this->subject('Admin Accepted')
-                    ->view('emails.admin_remove')
+                    ->view('emails.student_registerd_email')
                     ->with([
                         'user' => $this->student,
                     ]);
