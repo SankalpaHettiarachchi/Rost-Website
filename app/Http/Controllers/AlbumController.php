@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Albums;
 use App\Models\Image;
+use App\Events\Album_Added;
 
 
 class AlbumController extends Controller
@@ -58,7 +59,7 @@ class AlbumController extends Controller
                     'album_id' =>$this_album_id,
                 ]);
             }
-
+            event(new Album_Added($album));
 
             return redirect('/admin123/albums');
         }

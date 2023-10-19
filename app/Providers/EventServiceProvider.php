@@ -32,6 +32,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\News_Added' => [
             'App\Listeners\News_Added_Listener'
         ],
+        'App\Events\Album_Added' => [
+            'App\Listeners\Album_Added_listener'
+        ],
     ];
 
     /**
