@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\News;
 use Illuminate\Http\Request;
+use App\Events\News_Added;
 
 class NewsController extends Controller
 {
@@ -64,6 +65,8 @@ class NewsController extends Controller
                     'in_link' => $request->input('in_link'),
                 ]);
                 $newsItem->save();
+                event(new News_Added($newsItem));
+
                 return redirect('/admin123/news');
     
             }
