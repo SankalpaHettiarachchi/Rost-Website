@@ -8,9 +8,6 @@ use App\Models\User;
 use App\Models\Students;
 use App\Models\Messages;
 
-
-
-
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -28,6 +25,8 @@ class DashboardController extends Controller
         $students_count = Students::count();
         $admins_pending_Count = User::where('role', 0)->count();
         $messages_count = Messages::count();
+        $unread_messages_count = Messages::where('is_read', false)->count();
+
 
 
         // dd($news_count,$admins_count,$albums_count,$students_count);
@@ -39,6 +38,7 @@ class DashboardController extends Controller
             'students_count' => $students_count,
             'admins_pending_Count' => $admins_pending_Count,
             'messages_count' => $messages_count,
+            'unread_messages_count' => $unread_messages_count,
         ]);
     }
 

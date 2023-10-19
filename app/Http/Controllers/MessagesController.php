@@ -64,11 +64,16 @@ class MessagesController extends Controller
         $messageitem = Messages::find($id);
         $id = $messageitem->id;
         
+        $messageitem->update
+        ([
+            'is_read'=>True,
+        ]);
+        
         $messageitems = Messages::all();
         return view('admin.messages', [
             'messageitem' => $messageitem,
             'messageitems' => $messageitems,
-        ]);  
+        ]);
     }
 
     /**

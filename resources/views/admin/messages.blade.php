@@ -38,7 +38,7 @@
                                         <td>{{ $item->email }}</td>
                                         <td style="text-align: justify">{{ $item->message }}</td>
                                         <td>{{ $item->created_at }}</td>
-                                        <td>{{ $item->is_read ? 'Yes' : 'No' }}</td>
+                                        <td><input class="form-check-input " type="checkbox" {{$item->is_read ? 'checked' : '' }} disabled></td>
                                         <td>
                                             <a href="{{ route('messages.show', $item->id) }}" title=""><button class="btn btn-info btn-sm"> View</button></a>
                                             <form method="POST" action="{{ url('/admin123/messages' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
