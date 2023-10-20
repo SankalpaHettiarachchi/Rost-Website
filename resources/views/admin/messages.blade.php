@@ -13,6 +13,9 @@
             <div class="form-floating">
                 <textarea class="form-control" placeholder="" id="" style="height: 150px;">{{ isset($messageitem) ? $messageitem->message : '' }}</textarea>
             </div>
+            <div class="form-floating">
+                <a href="fgh" title=""><button class="btn btn-info"> Reply</button></a>
+            </div>
         </div>
         <br>
         <div class="row g-4">
