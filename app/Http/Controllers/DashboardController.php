@@ -27,6 +27,10 @@ class DashboardController extends Controller
         $messages_count = Messages::count();
         $unread_messages_count = Messages::where('is_read', false)->count();
 
+        $Show_fourmessages = Messages::take(4)->get();
+        $Show_four_admin = User::where('role', 0)->take(4)->get();
+
+
 
 
         // dd($news_count,$admins_count,$albums_count,$students_count);
@@ -39,6 +43,8 @@ class DashboardController extends Controller
             'admins_pending_Count' => $admins_pending_Count,
             'messages_count' => $messages_count,
             'unread_messages_count' => $unread_messages_count,
+            'Show_fourmessages' => $Show_fourmessages,
+            'Show_four_admin' => $Show_four_admin,
         ]);
     }
 
