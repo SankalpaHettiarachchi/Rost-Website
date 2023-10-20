@@ -95,7 +95,7 @@
                                         <td>{{ $student->contact_no }}</td>
                                         <td>{{ $student->email }}</td>
                                         <td>
-                                            <a href="{{ route('news.show', $student->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Send Email</button></a>
+                                            <a href="mailto:{{ $student->email }}?from=your_email@example.com&subject=Rost Web" title="Edit Album"><button class="btn btn-info btn-sm"> Send Email</button></a>
                                             <form method="POST" action="{{ url('/admin123/users' . '/' . $student->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
