@@ -12,15 +12,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Admins</p>
-                                <h6 class="mb-0">{{ isset($admins_count) ? $admins_count : '' }}</h6>
+                    @if(auth()->user()->s_role === 1)
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Total Admins</p>
+                                    <h6 class="mb-0">{{ isset($admins_count) ? $admins_count : '' }}</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
@@ -39,15 +41,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Admin Requests</p>
-                                <h6 class="mb-0">{{ isset($admins_pending_Count) ? $admins_pending_Count : '' }}</h6>
+                    @if(auth()->user()->s_role === 1)
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Admin Requests</p>
+                                    <h6 class="mb-0">{{ isset($admins_pending_Count) ? $admins_pending_Count : '' }}</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
@@ -90,6 +94,7 @@
                             @endforeach
                         </div>
                     </div>
+                    @if(auth()->user()->s_role === 1)
                     <div class="col-sm-12 col-md-6 col-xl-4">
                         <div class="h-100 bg-secondary rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-2">
@@ -109,6 +114,7 @@
                             @endforeach
                         </div>
                     </div>
+                    @endif
                     <div class="col-sm-12 col-md-6 col-xl-4">
                         <div class="h-100 bg-secondary rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">

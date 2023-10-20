@@ -5,6 +5,7 @@
         <div class="row g-4">
             <div class="col-12">
                 <div class="bg-secondary rounded h-100 p-4">
+                    @if(auth()->user()->s_role === 1)
                     <h4 class="mb-4">Page Admins</h4>
                     <div class="table-responsive">
                         <table class="table" id="admin_tbl">
@@ -73,6 +74,7 @@
                     <br>
                     <hr>
                     <br>
+                    @endif
                     <h4 class="mb-4">Registered Students</h4>
                     <div class="table-responsive">
                         <table class="table" id="std_tbl">
