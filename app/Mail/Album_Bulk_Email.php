@@ -31,7 +31,7 @@ class Album_Bulk_Email extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Album Bulk Email',
+            subject: 'New Album Added',
         );
     }
 
@@ -43,7 +43,7 @@ class Album_Bulk_Email extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'Emails.album_added_bulk',
         );
     }
 
