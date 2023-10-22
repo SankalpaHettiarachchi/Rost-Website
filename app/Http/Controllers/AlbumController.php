@@ -59,7 +59,8 @@ class AlbumController extends Controller
                     'album_id' =>$this_album_id,
                 ]);
             }
-            event(new Album_Added($album));
+            
+            // event(new Album_Added($album));
 
             return redirect('/admin123/albums');
         }

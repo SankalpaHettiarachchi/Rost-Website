@@ -65,7 +65,10 @@ class NewsController extends Controller
                     'in_link' => $request->input('in_link'),
                 ]);
                 $newsItem->save();
-                event(new News_Added($newsItem));
+
+                // event(new News_Added($newsItem));
+
+                
 
                 return redirect('/admin123/news');
     
