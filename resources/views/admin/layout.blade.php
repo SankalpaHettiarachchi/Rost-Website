@@ -25,7 +25,7 @@
 
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -127,10 +127,10 @@
     <script src="{{ asset('admin/lib/chart/chart.min.js') }}"></script>
     <script src="{{ asset('admin/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('admin/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.css') }}"></script>
+    <script src="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('admin/lib/tempusdominus/js/moment.min.js') }}"></script>
     <script src="{{ asset('admin/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
-    <script src="{{ asset('admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}"></script>
+    <script src="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
     <!-- Template Javascript -->
     <script src="{{ asset('admin/js/main.js') }}"></script>
