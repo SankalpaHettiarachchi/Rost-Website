@@ -67,9 +67,7 @@ class NewsController extends Controller
                 $newsItem->save();
 
                 // event(new News_Added($newsItem));
-
                 
-
                 return redirect('/admin123/news');
     
             }
