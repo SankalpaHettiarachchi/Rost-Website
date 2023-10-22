@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\News;
+use App\Models\Students;
 use Illuminate\Http\Request;
 use App\Events\News_Added;
+use App\Jobs\News_added_bulk;
 
 class NewsController extends Controller
 {
@@ -66,6 +68,8 @@ class NewsController extends Controller
                 ]);
                 $newsItem->save();
 
+                $data = Students::pluck('email')->all();
+                dispatch(new News_added_bulk($data));
                 // event(new News_Added($newsItem));
                 
                 return redirect('/admin123/news');

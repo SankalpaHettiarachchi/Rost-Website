@@ -9,14 +9,14 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\Album_Bulk_Email;
+use App\Mail\News_Bulk_Email;
 
-class Album_added_bulk implements ShouldQueue
+
+class News_added_bulk implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $data;
-
     /**
      * Create a new job instance.
      *
@@ -34,12 +34,10 @@ class Album_added_bulk implements ShouldQueue
      */
     public function handle()
     {
-        $email = new Album_Bulk_Email();
+        $email = new News_Bulk_Email();
 
         foreach ($this->data as $stemail) {
             Mail::to($stemail)->send($email);
         }
-        
-        // Mail::to($this->data['email'])->send($email);
     }
 }
