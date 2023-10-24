@@ -34,9 +34,9 @@
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> --}}
 
 </head>
 
@@ -53,7 +53,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST-ADMIN</h3>
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST</h3>
                 </a>
                 <div class="navbar-nav w-100">
                     <a href="{{ url('/admin123/dashboard') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Dashboard</a>
@@ -70,7 +70,7 @@
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+            {{-- <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -82,7 +82,6 @@
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -91,10 +90,41 @@
                         </a>
                     </div>
                 </div>
+            </nav> --}}
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-user me-lg-2"></i>
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"
+                                >
+                                <h6 class="fw-normal mb-0">Logout</h6>
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>                            
+                    </div>
+                </div>
             </nav>
             <!-- Navbar End -->
 
-            @yield('content')
+            <div class="container-fluid pt-4 px-4">
+
+                @yield('content')
+            
+            </div>
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
@@ -124,10 +154,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="{{ asset('admin/lib/chart/chart.min.js') }}" defer></script>
     <script src="{{ asset('admin/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('admin/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('admin/lib/owlcarousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('admin/lib/tempusdominus/js/moment.min.js') }}"></script>
     <script src="{{ asset('admin/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
     <script src="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
