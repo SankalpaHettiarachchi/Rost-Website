@@ -5,7 +5,7 @@
     <div class="col-sm-12" style="display: {{ isset($messageitem) ? 'block' : 'none'  }} ">
         <div class="bg-secondary rounded h-100 p-4">
             <div class="accordion-item bg-transparent">
-                <h6 class="mb-4">Messages</h6>
+                <h6 class="mb-4">Message Details</h6>
 
                 <div id="collapseOne" class="accordion-collapse {{ isset($messageitem) ? 'collapse show' : 'collapse'  }}" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
                     <div class="accordion-body">

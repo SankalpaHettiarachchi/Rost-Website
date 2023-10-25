@@ -211,7 +211,7 @@
                                 <td style="text-align: center">{{ $item->upload_date }}</td>
                                 <td style="text-align: center">{{ $item->image_count }}</td>
                                 <td>
-                                    <a href="{{ route('albums.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Edit</button></a>
+                                    <a href="{{ route('albums.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Images should re upload.Confirm Edit?&quot;)"> Edit</button></a>
                                     <form method="POST" action="{{ url('/admin123/albums' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}

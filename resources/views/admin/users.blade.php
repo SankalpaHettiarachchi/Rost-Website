@@ -39,14 +39,14 @@
                                             <form method="POST" action="{{ route('admin.make', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('PATCH') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-success btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                <button type="submit" class="btn btn-success btn-sm" title="Accept Request" onclick="return confirm(&quot;Accept as a admin?&quot;)">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i> Accept
                                                 </button>
                                             </form>
                                             <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Delete request?&quot;)">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
                                                 </button>
                                             </form>     
@@ -54,7 +54,7 @@
                                             <form method="POST" action="{{ route('admin.destroy', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Remove admin?&quot;)">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
                                                 </button>
                                             </form>
@@ -95,7 +95,7 @@
                                     <form method="POST" action="{{ url('/admin123/users' . '/' . $student->id) }}" accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Delete message?&quot;)">
                                             <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
                                         </button>
                                     </form>                                

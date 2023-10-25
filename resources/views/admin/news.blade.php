@@ -248,7 +248,7 @@
                                     <img src="{{ asset('uploads/'. $item->cover) }}" alt class="img img-responsive" style="width: 75%;height:75%">
                                 </td>
                                 <td>
-                                    <a href="{{ route('news.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Confirm Edit?&quot;)"> Edit</button></a>
+                                    <a href="{{ route('news.show', $item->id) }}" title="Edit Album"><button class="btn btn-info btn-sm" onclick="return confirm(&quot;Images should re upload.Confirm Edit?&quot;)"> Edit</button></a>
                                     <form method="POST" action="{{ url('/admin123/news' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}

@@ -20,7 +20,7 @@ class DashboardController extends Controller
     public function index()
     {
         $news_count = News::count();
-        $admins_count = User::count(); 
+        $admins_count = User::where('role', 1)->count(); 
         $albums_count = Albums::count();
         $students_count = Students::count();
         $admins_pending_Count = User::where('role', 0)->count();
