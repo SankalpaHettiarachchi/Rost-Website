@@ -1,7 +1,6 @@
 @extends('admin.layout')
 
 @section('content')
-
     <div class="col-sm-12">
         <div class="bg-secondary rounded h-100 p-4">
             <div class="accordion-item bg-transparent">
