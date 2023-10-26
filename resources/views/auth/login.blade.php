@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +70,82 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div class="container-fluid position-relative d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Sign In Start -->
+    <div class="container-fluid">
+        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="index.html" class="">
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ROST</h3>
+                            </a>
+                            <h3>Sign In</h3>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                            <label for="email">{{ __('Email Address') }}</label>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror 
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Password">
+                            <label for="password">{{ __('Password') }}</label>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror             
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
+                            </div>
+                            <div class="row mb-0">
+                                @if (Route::has('password.request'))
+                                    <a href="{{ route('password.request') }}">
+                                        Forgot Your Password?
+                                    </a>
+                                @endif                                   
+                            </div>
+                        </div> 
+                        
+                        {{-- <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div> --}}
+                                               
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">{{ __('Login') }}</button>
+                        <p class="text-center mb-0">Don you want to be an admin? <a href="{{ __('register') }}">Request</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Sign In End -->
 </div>
 @endsection
