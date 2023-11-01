@@ -108,7 +108,7 @@
                         </div>
 
                         <div class="form-floating mb-4">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" required placeholder="Password">
                             <label for="password">{{ __('Password') }}</label>
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
