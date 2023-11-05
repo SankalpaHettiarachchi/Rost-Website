@@ -118,7 +118,7 @@
                         @enderror                    
                     </div>
                     <button type="submit" class="btn btn-primary py-3 w-100 mb-4">{{ __('Request') }}</button>
-                    <p class="text-center mb-0">Already have an Admin Account? <a href="">Sign In</a></p>
+                    <p class="text-center mb-0">Already have an Admin Account? <a href="{{ __('login') }}">Sign In</a></p>
                 </form>
             </div>
         </div>

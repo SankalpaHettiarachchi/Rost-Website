@@ -98,7 +98,7 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="name@example.com">
                             <label for="email">{{ __('Email Address') }}</label>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -117,7 +117,7 @@
                             @enderror             
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-between mb-4">
+                        {{-- <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
@@ -129,16 +129,8 @@
                                     </a>
                                 @endif                                   
                             </div>
-                        </div> 
-                        
-                        {{-- <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <a href="">Forgot Password</a>
-                        </div> --}}
-                                               
+                        </div>  --}}
+                                              
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">{{ __('Login') }}</button>
                         <p class="text-center mb-0">Don you want to be an admin? <a href="{{ __('register') }}">Request</a></p>
                     </div>
