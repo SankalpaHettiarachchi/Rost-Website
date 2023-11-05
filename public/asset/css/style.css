@@ -904,13 +904,26 @@ a:focus {
   text-align: center;
 }
 
-.page-title {
-  background: url("../images/pg-title/img-1.jpg") center center/cover no-repeat local;
+.page-title{
+
   height: 365px;
   text-align: center;
   position: relative;
   display: table;
   width: 100%;
+}
+
+.album_img{
+  background: url("../images/pg-title/album.jpg") center center/cover no-repeat local;
+}
+.news_img{
+  background: url("../images/pg-title/news.jpg") center center/cover no-repeat local;
+}
+.about_img{
+  background: url("../images/pg-title/about.jpg") center center/cover no-repeat local;
+}
+.contact_img{
+  background: url("../images/pg-title/contact.jpg") center center/cover no-repeat local;
 }
 
 @media (max-width: 1199px) {

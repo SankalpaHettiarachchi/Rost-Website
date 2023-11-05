@@ -3,7 +3,7 @@
 @section('content')
     <div class="page-wrapper">
         <!-- start page-title-wrapper -->
-        <div class="page-title">
+        <div class="page-title about_img">
             <div class="container">
                 <h1>About Us</h1>
             </div>

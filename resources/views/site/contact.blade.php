@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="page-title">
+    <div class="page-title contact_img">
         <div class="container">
             <h1>Contact Us</h1>
         </div>

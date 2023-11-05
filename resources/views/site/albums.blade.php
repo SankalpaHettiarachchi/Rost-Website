@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-    <div class="page-title">
+    <div class="page-title album_img">
         <div class="container">
             <h1>Albums</h1>
         </div>
