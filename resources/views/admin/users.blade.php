@@ -3,10 +3,10 @@
 @section('content')
 
 <div class="row g-4">
+    @if(auth()->user()->s_role === 1)
     <div class="col-12">
         <div class="bg-secondary rounded p-4">
             <h6 class="mb-4">Page Admins</h6>
-            @if(auth()->user()->s_role === 1)
             <div class="table-responsive">
                 <table class="table" id="admin_tbl">
                     <thead>
@@ -30,10 +30,10 @@
                                     @elseif ($admin->s_role === 0 && $admin->role === 1)
                                         Admin
                                     @else
-                                        Not Admin
+                                       Guest
                                     @endif
                                 </td>
-                                <td style="text-align: center" >
+                                <td style="text-align: right" >
                                     @if(auth()->user()->s_role === 1)
                                         @if ($admin->role === 0 )
                                             <form method="POST" action="{{ route('admin.make', ['id' => $admin->id]) }}" accept-charset="UTF-8" style="display:inline">
@@ -66,9 +66,9 @@
                     </tbody>
                 </table>
             </div>
-            @endif
         </div>
     </div>
+    @endif
     <div class="col-12">
         <div class="bg-secondary rounded p-4">
             <h6 class="mb-4">Registerd Students</h6>

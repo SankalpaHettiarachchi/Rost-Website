@@ -19,7 +19,7 @@ class UsersController extends Controller
     public function index()
     {
         $students = Students::all();
-        $admins = User::all();
+        $admins = User::orderBy('role', 'desc')->get();
         return view('admin.users', compact('students'))->with('admins',$admins);
     }
 
