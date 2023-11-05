@@ -28,7 +28,7 @@ class Student_Registered_Email extends Mailable
 
     public function build()
     {
-        return $this->subject('Admin Accepted')
+        return $this->subject('Student Registered')
                     ->view('emails.student_registerd_email')
                     ->with([
                         'user' => $this->student,

@@ -414,6 +414,11 @@
                                 <div>
                                     <button class="" type="submit">Regster Now</button>
                                 </div>
+                                <script>
+                                    @if ($errors->has('email'))
+                                        alert("Email validation failed: {{ $errors->first('email') }}");
+                                    @endif
+                                </script>
                             </form>
                         </div>
                     </div>

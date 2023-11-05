@@ -19,7 +19,7 @@ class StudentController extends Controller
     {
         $request->validate([
             'f_name' => 'required|string|max:100',
-            'email' => 'required|email|max:255',
+            'email' => 'required|email|max:255|unique:student',
             'l_name' => 'required|string',
             'contact_no' => 'required|string|max:12',
         ]);
@@ -38,8 +38,8 @@ class StudentController extends Controller
                     'contact_no' => $contact_no,
                 ]);
                 $student->save();
-                event(new Student_Registerd($student));
                 return back()->withInput();
+                event(new Student_Registerd($student));
     
             }
             else
