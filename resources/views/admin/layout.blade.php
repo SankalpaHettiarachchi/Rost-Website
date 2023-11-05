@@ -84,7 +84,12 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-user-secret me-lg-2"></i>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }} - 
+                            @if ( Auth::user()->s_role == 1)
+                                (Super Admin)
+                            @else
+                                (Admin)
+                            @endif
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="{{ route('logout') }}" class="dropdown-item"
@@ -147,6 +152,7 @@
     <!-- Template Javascript -->
     <script src="{{ asset('admin/js/main.js') }}"></script>
     <script src="{{ asset('admin/js/custom.js') }}"></script>
+    
     {{-- <script>
         // Check if the page should be refreshed (set by the HomeController)
         @if(session('refresh'))
