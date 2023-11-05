@@ -69,16 +69,26 @@
                                 <input type="text" class="form-control" name="in_link" placeholder="Linked In" value="{{ isset($newsitem) ? $newsitem->in_link : '' }}">
                                 <label for="floatingInput">LinkedIn Link</label>
                             </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="row">
+                                    @if(isset($newsitem))
+                                    <div class="col-sm-6 pb-2">
+                                        <button type="submit" class="btn btn-success">Update News</button>
+                                    </div>                
+                                    @else
+                                        <div class="col-sm-6 pb-2">
+                                            <button type="submit" class="btn btn-success">Save News</button>
+                                        </div>
+                                    @endif
 
-                                @if(isset($newsitem))
-                                <div class="col-sm-2 col-form-label">
-                                    <button type="submit" class="btn btn-success">Update News</button>
-                                </div>                
-                                @else
-                                    <div class="col-sm-2 col-form-label">
-                                        <button type="submit" class="btn btn-success">Save News</button>
-                                    </div>
-                                @endif
+                                    <div class="col-sm-6">
+                                        <a href="{{ url('/admin123/news') }}">
+                                            <button type="button" class="btn btn-danger">Cancel</button>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </div>
 
                             @if ($errors->any())
                                 <div class="col-sm-10">
@@ -91,13 +101,7 @@
                                     </div>
                                 </div>
                             @endif
-
                         </form>
-                        <div class="col-sm-3 col-form-label">
-                            <a href="{{ url('/admin123/news') }}">
-                                <button class="btn btn-danger">Cancel</button>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

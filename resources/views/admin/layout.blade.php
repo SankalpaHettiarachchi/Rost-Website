@@ -84,19 +84,19 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-user-secret me-lg-2"></i>
-                            {{ Auth::user()->name }} - 
                             @if ( Auth::user()->s_role == 1)
-                                (Super Admin)
+                                Super Admin
                             @else
-                                (Admin)
+                                Admin
                             @endif
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <h6 class="p-2">{{ Auth::user()->name }}</h6>
                             <a href="{{ route('logout') }}" class="dropdown-item"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();"
                                 >
-                                <h6 class="fw-normal mb-0">Logout</h6>
+                                <li>Logout</li>
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf

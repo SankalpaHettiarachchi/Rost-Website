@@ -1,6 +1,7 @@
 @extends('admin.layout')
 
 @section('content')
+<div class="row g-4">
     <div class="col-sm-12">
         <div class="bg-secondary rounded h-100 p-4">
             <div class="accordion-item bg-transparent">
@@ -59,17 +60,27 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
 
-                                @if(isset($album))
-                                <div class="col-sm-2 col-form-label">
-                                    <button type="submit" class="btn btn-success">Update Album</button>
-                                </div>                
-                                @else
-                                    <div class="col-sm-2 col-form-label">
-                                        <button type="submit" class="btn btn-success">Save Album</button>
-                                    </div>
-                                @endif
+                            <div class="col-sm-3">
+                                <div class="row">
+                                    @if(isset($album))
+                                    <div class="col-sm-6 pb-2">
+                                        <button type="submit" class="btn btn-success">Update Album</button>
+                                    </div>                
+                                    @else
+                                        <div class="col-sm-6 pb-2">
+                                            <button type="submit" class="btn btn-success">Save Album</button>
+                                        </div>
+                                    @endif
+
+                                    <div class="col-sm-6">
+                                        <a href="{{ url('/admin123/albums') }}">
+                                            <button type="button" class="btn btn-danger">Cancel</button>
+                                        </a>
+                                    </div>    
+                                </div>   
+                            </div>
 
                             @if ($errors->any())
                                 <div class="col-sm-10">
@@ -82,19 +93,13 @@
                                     </div>
                                 </div>
                             @endif
-
                         </form>
-                        <div class="col-sm-3 col-form-label">
-                            <a href="{{ url('/admin123/albums') }}">
-                                <button class="btn btn-danger">Cancel</button>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="col-12">
         <div class="bg-secondary rounded h-100 p-4">
             <h6 class="mb-4">Abums on Pagee</h6>
@@ -133,4 +138,5 @@
             </div>                       
         </div>
     </div>
+</div>
 @endsection
