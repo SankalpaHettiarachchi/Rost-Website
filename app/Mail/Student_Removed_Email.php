@@ -27,7 +27,7 @@ class Student_Removed_Email extends Mailable
     public function build()
     {
         return $this->subject('Student Removed')
-                    ->view('emails.student_registerd_email')
+                    ->view('emails.student_remove_email')
                     ->with([
                         'user' => $this->student,
                     ]);

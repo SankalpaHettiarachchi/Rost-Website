@@ -95,8 +95,8 @@
                                     <form method="POST" action="{{ url('/admin123/users' . '/' . $student->id) }}" accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Delete message?&quot;)">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Album" onclick="return confirm(&quot;Remove Student?&quot;)">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i> Remove
                                         </button>
                                     </form>                                
                                 </td>
