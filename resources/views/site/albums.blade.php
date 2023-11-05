@@ -24,6 +24,7 @@
                                 <div class="album_des">
                                     <span class="entry-date">{{ isset($albums) ? $albums_item->description : '' }}</span>
                                 </div>
+                                <br>
                                 <div class="entry-footer">
                                     <a href="{{ route('albums.click', ['id' => $albums_item->id]) }}">Show all {{ isset($albums) ? $albums_item->image_count : '' }} images </a>
                                 </div>
@@ -32,9 +33,9 @@
                     </div>
                 @endforeach
             </div>
+
             <br>
             @if( isset($album_images))
-            <hr>
                 <div class="container">
                     <h3>{{ isset($album_name) ? $album_name->album_name : '' }} - {{ isset($album_name) ? \Carbon\Carbon::parse($album_name->upload_date)->format('Y F d') : '' }}</h3>
                     <br>

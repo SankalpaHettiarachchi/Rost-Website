@@ -27,8 +27,8 @@ class DashboardController extends Controller
         $messages_count = Messages::count();
         $unread_messages_count = Messages::where('is_read', false)->count();
 
-        $Show_fourmessages = Messages::take(4)->get();
-        $Show_four_admin = User::where('role', 0)->take(4)->get();
+        $Show_fourmessages = Messages::take(4)->orderBy('created_at', 'desc')->get();
+        $Show_four_admin = User::where('role', 0)->orderBy('created_at', 'desc')->take(4)->get();
 
 
 
