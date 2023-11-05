@@ -28,7 +28,7 @@ class Accept_Admin_Email extends Mailable
 
     public function build()
     {
-        return $this->subject('Admin Accepted')
+        return $this->subject('Admin Request Accepted')
                     ->view('emails.admin_accept')
                     ->with([
                         'user' => $this->user,

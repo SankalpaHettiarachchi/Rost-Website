@@ -38,8 +38,8 @@ class StudentController extends Controller
                     'contact_no' => $contact_no,
                 ]);
                 $student->save();
-                return back()->withInput();
                 event(new Student_Registerd($student));
+                return back()->withInput();
     
             }
             else

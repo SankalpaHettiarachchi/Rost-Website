@@ -31,7 +31,7 @@ class News_Bulk_Email extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New News Email',
+            subject: 'Latest News Posted',
         );
     }
 

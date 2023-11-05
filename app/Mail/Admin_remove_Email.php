@@ -28,7 +28,7 @@ class Admin_remove_Email extends Mailable
 
     public function build()
     {
-        return $this->subject('Admin Accepted')
+        return $this->subject('Removed as Admin')
                     ->view('emails.admin_remove')
                     ->with([
                         'user' => $this->user,
