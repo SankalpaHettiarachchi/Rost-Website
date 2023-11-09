@@ -194,7 +194,7 @@ a:focus {
 }
 
 .section-padding {
-  padding: 115px 0 120px;
+  padding: 115px 0 25px;
 }
 
 @media (max-width: 1199px) {
@@ -211,7 +211,7 @@ a:focus {
 
 @media (max-width: 767px) {
   .section-padding {
-    padding: 0px 0 150px;
+    padding: 0px 0 120px;
   }
 }
 
@@ -4251,6 +4251,7 @@ a:focus {
 
 .about-us .about-details p {
   color: #1f252e;
+  text-align: justify;
 }
 
 .about-us .about-details ul {

@@ -39,12 +39,12 @@
                                     <div class="row">
                                         <h2 class="fnt">Overview</h2>
                                         <br>
-                                        <div class="col col-sm-6">
+                                        <div class="col col-sm-6"  style="text-align: justify">
                                             <p>Welcome to the Robotic Association of the Faculty of Technology, Rajarata University of Sri Lanka!. 
                                                 We offer exciting membership opportunities for undergraduate students interested in robotics 
                                                 and technology.
                                             </p>
-                                            <p>Through our regular sessions, workshops, and annual events, we strive to create a thriving 
+                                            <p  style="text-align: justify">Through our regular sessions, workshops, and annual events, we strive to create a thriving 
                                                 community where students can explore their interests in robotics and related technologies. 
                                                 Our organization serves as a platform for individuals who are eager to learn, grow, and excel 
                                                 in this rapidly evolving field.
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel-group faq-accordion theme-accordion-s2 " id="accordion">
+                <div class="panel-group faq-accordion theme-accordion-s2 " id="accordion" style="padding-bottom: 20px">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">Membership Eligibility</a>
