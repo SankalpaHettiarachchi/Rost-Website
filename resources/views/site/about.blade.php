@@ -140,6 +140,22 @@
                                     <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
                                     artificial intelligence world.
                                 </p>
+                                <p class="card-text">
+                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
+                                    artificial intelligence world.
+                                </p>
+                                <p class="card-text">
+                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
+                                    artificial intelligence world.
+                                </p>
+                                <p class="card-text">
+                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
+                                    artificial intelligence world.
+                                </p>
+                                <p class="card-text">
+                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
+                                    artificial intelligence world.
+                                </p>
                                 </div>
                             </div>
                         </div>
@@ -356,15 +372,12 @@
         </section>
 
         <!-- start of career-section -->        
-        <section id ="career" style ="display: none;" class="careers-section section-padding">
+        <section id ="career" style ="display: none;" class="careers-section section-padding" style="padding-top: 10px;">
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-10 col-lg-offset-1">
                         <div class="filter-row">
                             <div class="pagi">
-                                <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
-                                <span>1 of 3 </span>
-                                <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <div class="job-lists">
@@ -391,34 +404,41 @@
                         <div class="job-search-form">
                             <form class="form" action="{{ url('about/student') }}" method="POST">
                                 @csrf
-                                <div>
+                                <div class="col-sm-9">
                                     <div>
-                                        <label>First Name</label>
-                                        <input type="text"  name="f_name" class="form-control" placeholder="Ex : John">
+                                        <div>
+                                            <label>First Name</label>
+                                            <input type="text"  name="f_name" class="form-control" placeholder="Ex : John">
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Email Address (University)</label>
+                                            <input type="text" name="email" class="form-control" placeholder="@tec.rjt.ac.lk">
+                                        </div>
+                                        <br>
                                     </div>
                                     <div>
-                                        <label>Email Address (University)</label>
-                                        <input type="text" name="email" class="form-control" placeholder="@tec.rjt.ac.lk">
-                                    </div>
+                                        <div>
+                                            <label>Last Name</label>
+                                            <input type="text" name="l_name" class="form-control" placeholder="Ex : Smith">
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <label>Contact No</label>
+                                            <input type="text" name="contact_no" class="form-control" placeholder="+94 XXXX XXXXX">
+                                        </div>
+                                    </div> 
                                 </div>
-                                <div>
+                                <div class="col-sm-3">
                                     <div>
-                                        <label>Last Name</label>
-                                        <input type="text" name="l_name" class="form-control" placeholder="Ex : Smith">
+                                        <button class="" type="submit">Regster Now</button>
                                     </div>
-                                    <div>
-                                        <label>Contact No</label>
-                                        <input type="text" name="contact_no" class="form-control" placeholder="+94 XXXX XXXXX">
-                                    </div>
-                                </div> 
-                                <div>
-                                    <button class="" type="submit">Regster Now</button>
+                                    <script>
+                                        @if ($errors->has('email'))
+                                            alert("Email validation failed: {{ $errors->first('email') }}");
+                                        @endif
+                                    </script>
                                 </div>
-                                <script>
-                                    @if ($errors->has('email'))
-                                        alert("Email validation failed: {{ $errors->first('email') }}");
-                                    @endif
-                                </script>
                             </form>
                         </div>
                     </div>
