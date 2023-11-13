@@ -23,16 +23,19 @@
                             <textarea class="form-control"  name="al_date" style="height: 120px;">{{ isset($messageitem) ? $messageitem->message : '' }}</textarea>
                             <label for="floatingTextarea">Message</label>
                         </div>
-
-                        <div class="col-sm-3 col-form-label">
-                            <a href="mailto:{{ isset($messageitem) ? $messageitem->email : '' }}?from=your_email@example.com&subject=Rost Web">
-                                <button class="btn btn-success">Replay</button>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 col-form-label">
-                            <a href="{{ url('/admin123/messages') }}">
-                                <button class="btn btn-danger">Back</button>
-                            </a>
+                        <div class="col-sm-3">
+                            <div class="row">
+                                <div class="col-sm-3 col-form-label">
+                                    <a href="mailto:{{ isset($messageitem) ? $messageitem->email : '' }}?from=your_email@example.com&subject=Rost Web">
+                                        <button class="btn btn-success">Replay</button>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-form-label" style="padding-left: 20px">
+                                    <a href="{{ url('/admin123/messages') }}">
+                                        <button class="btn btn-danger">Back</button>
+                                    </a>
+                                </div>    
+                            </div>  
                         </div>
                     </div>
                 </div>

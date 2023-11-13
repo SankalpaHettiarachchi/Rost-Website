@@ -27,7 +27,7 @@ $(document).ready(function() {
         "lengthMenu": [[5], [1,2,3,4,5, "All"]],
     });
     $('#admin_tbl').DataTable({
-        order: [[0, 'desc']], 
+        order: [[1, 'desc']], 
         searching: true,     
         paging: true,        
         "lengthMenu": [[5], [1,2,3,4,5, "All"]],
