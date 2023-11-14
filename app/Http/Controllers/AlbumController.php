@@ -63,7 +63,7 @@ class AlbumController extends Controller
             }
 
             $data = Students::pluck('email')->all();
-            // dispatch(new Album_added_bulk($data));
+            dispatch(new Album_added_bulk($data));
 
             // event(new Album_Added($album));
 

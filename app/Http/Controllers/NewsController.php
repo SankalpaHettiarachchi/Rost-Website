@@ -70,6 +70,7 @@ class NewsController extends Controller
 
                 $data = Students::pluck('email')->all();
                 dispatch(new News_added_bulk($data));
+                
                 // event(new News_Added($newsItem));
                 
                 return redirect('/admin123/news');

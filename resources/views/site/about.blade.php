@@ -140,24 +140,19 @@
                                     <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
                                     artificial intelligence world.
                                 </p>
-                                <p class="card-text">
-                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
-                                    artificial intelligence world.
-                                </p>
-                                <p class="card-text">
-                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
-                                    artificial intelligence world.
-                                </p>
-                                <p class="card-text">
-                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
-                                    artificial intelligence world.
-                                </p>
-                                <p class="card-text">
-                                    <span class="quote-mark ">"  </span>  To be a competitor in the robotics and 
-                                    artificial intelligence world.
-                                </p>
                                 </div>
                             </div>
+                            <br>
+                            <p style="font-color: black;text-align:center;">
+                                In our pursuit to be a frontrunner in the robotics and artificial intelligence landscape, 
+                                we are committed to relentless innovation and groundbreaking research. Our vision encompasses 
+                                not only technological leadership but also a profound impact on industries and society at 
+                                large. We strive to create intelligent systems that enhance efficiency, improve quality of 
+                                life, and contribute to the betterment of humanity. Through a culture of collaboration, 
+                                continuous learning, and a focus on ethical and responsible AI, we aspire to be trailblazers 
+                                in shaping the future of intelligent automation and robotics, setting new standards for 
+                                excellence and positively influencing the global technological paradigm
+                            </p>
                         </div>
                         <div class="col col-md-6 about-image-col">
                             <img src="{{ asset('asset/images/about/vision.jpg') }}" alt class="img img-responsive about-img">
