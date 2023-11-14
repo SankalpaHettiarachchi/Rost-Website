@@ -30,9 +30,6 @@ class DashboardController extends Controller
         $Show_fourmessages = Messages::take(4)->orderBy('created_at', 'desc')->get();
         $Show_four_admin = User::where('role', 0)->orderBy('created_at', 'desc')->take(4)->get();
 
-
-
-
         // dd($news_count,$admins_count,$albums_count,$students_count);
 
         return view('admin.dashboard', [
