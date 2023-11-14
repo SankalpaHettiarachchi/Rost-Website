@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <textarea class="form-control"  name="al_date" style="height: 120px;">{{ isset($album) ? $album->description : '' }}</textarea>
+                                <textarea class="form-control"  name="al_description" style="height: 120px;">{{ isset($album) ? $album->description : '' }}</textarea>
                                 <label for="floatingTextarea">Description</label>
                             </div>
 
@@ -46,7 +46,7 @@
                                             <label for="floatingInput">Upload Date</label>
                                         </div>
                                         <div class="col-sm-9">
-                                            <input type="date" class="form-control" name="al_description" placeholder="name@example.com" value="{{ isset($album) ? $album->upload_date : '' }}" required>
+                                            <input type="date" class="form-control" name="al_date" placeholder="name@example.com" value="{{ isset($album) ? $album->upload_date : '' }}" required>
                                         </div>
                                     </div>
                                 </div>

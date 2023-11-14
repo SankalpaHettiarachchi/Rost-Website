@@ -30,12 +30,13 @@ class AlbumController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'al_name' => 'required|string',
-            'al_date' => 'required|date',
-            'al_description' => 'required|string',
-            'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif'
-        ]);
+        // $request->validate([
+        //     'al_name' => 'required|string',
+        //     'al_date' => 'required|date',
+        //     'al_description' => 'required|string',
+        //     'ad_iamges.*' => 'required|image|mimes:jpeg,png,jpg,gif'
+        // ]);
+
         if($request)
         {
             $albumName = $request->input('al_name');
@@ -62,7 +63,7 @@ class AlbumController extends Controller
             }
 
             $data = Students::pluck('email')->all();
-            dispatch(new Album_added_bulk($data));
+            // dispatch(new Album_added_bulk($data));
 
             // event(new Album_Added($album));
 
