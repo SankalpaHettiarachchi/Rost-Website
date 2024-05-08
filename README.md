@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://codesandbox.io">
-    <img src="https://codesandbox.io/static/img/banner.png?v=2" height="300px">
+  <a href="https://github.com/SankalpaHettiarachchi/">
+    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover.JPG" height="300px">
   </a>
 </p>
 
