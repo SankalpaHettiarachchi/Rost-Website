@@ -1,6 +1,7 @@
 <p align="center">
   <a href="https://github.com/SankalpaHettiarachchi/">
     <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover.JPG" height="300px">
+    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover.JPG" height="300px">
   </a>
 </p>
 
