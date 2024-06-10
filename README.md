@@ -1,9 +1,12 @@
 # ROST CMS
 <p align="center">
   <a href="https://github.com/SankalpaHettiarachchi/">
-    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover.JPG" height="300px">
+    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover1.JPG" height="300px">
+    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover2.JPG" height="300px">
+    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover3.JPG" height="300px">
   </a>
 </p>
+
 
 &nbsp;
 ## Technologies
