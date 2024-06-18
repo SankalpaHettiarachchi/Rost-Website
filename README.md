@@ -1,19 +1,22 @@
-# ROST CMS
-<p align="center">
-  <a href="https://github.com/SankalpaHettiarachchi/">
-    <img src="https://github.com/SankalpaHettiarachchi/Rost-Website/blob/main/cover.JPG" height="300px">
-  </a>
-</p>
-
+<div align="center">
+    <h3 align="center">Rost Content Management System | University Academic Project</h3>
+    <p align="center">
+      <a href="https://github.com/SankalpaHettiarachchi/">
+        <img src="https://github.com/SankalpaHettiarachchi/readme/blob/main/rost/1.PNG" width="50%">
+        <img src="https://github.com/SankalpaHettiarachchi/readme/blob/main/rost/2.PNG" width="50%">
+        <img src="https://github.com/SankalpaHettiarachchi/readme/blob/main/rost/3.PNG" width="50%">
+      </a>
+    </p>
+</div>
 
 &nbsp;
 ## Technologies
 
 ![Bootstrap](https://img.shields.io/badge/-MVC%20-05122A?style=flat-square&logo=MVC&color=353535) ![Bootstrap](https://img.shields.io/badge/-OOP-05122A?style=flat-square&logo=OOP&color=353535) ![Bootstrap](https://img.shields.io/badge/-PHP-05122A?style=flat-square&logo=PHP&color=353535) ![Bootstrap](https://img.shields.io/badge/-Laravel-05122A?style=flat-square&logo=Laravel&color=353535) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-05122A?style=flat-square&logo=Bootstrap&color=353535) ![Bootstrap](https://img.shields.io/badge/-JavaScript-05122A?style=flat-square&logo=JavaScript&color=353535) ![Bootstrap](https://img.shields.io/badge/-HTML-05122A?style=flat-square&logo=HTML&color=353535) ![Bootstrap](https://img.shields.io/badge/-CSS-05122A?style=flat-square&logo=CSS&color=353535) ![Bootstrap](https://img.shields.io/badge/-Cpanel-05122A?style=flat-square&logo=Cpanel&color=353535) ![Bootstrap](https://img.shields.io/badge/-Google%20Cloud%20Console-05122A?style=flat-square&logo=Google-Cloud-Console&color=353535) ![Bootstrap](https://img.shields.io/badge/-MySQL-05122A?style=flat-square&logo=MySQL&color=353535) ![Bootstrap](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat-square&logo=Visual-Studio-Code&color=353535) ![Bootstrap](https://img.shields.io/badge/-Xampp-05122A?style=flat-square&logo=Xampp&color=353535) ![Bootstrap](https://img.shields.io/badge/-Postman-05122A?style=flat-square&logo=Postman&color=353535) ![Bootstrap](https://img.shields.io/badge/-Canva-05122A?style=flat-square&logo=Canva&color=353535)
 
-I have developed a web application for our Robotic Society at Rajarata University of Sri Lanka as an academic project. The main goal is to raise awareness of the society among students
+We have developed a web application for our Robotic Society at Rajarata University of Sri Lanka as an academic group project. The main goal is to raise awareness of the society among students
 
-## Fetures
+## Feature
 
 - Students can register with their university email addresses.
 - Email notifications are sent for website updates.
@@ -63,8 +66,7 @@ Node package manager (NPM) installing
    ```
 7. Go to link localhost:8000
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
+See the [open issues](https://github.com/SankalpaHettiarachchi/Rost-Website/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -80,15 +82,11 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- CONTACT -->
-## Contact
+<p align="center">
+<a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=Thank+you+for+your+attention..!"></a>  
+</p>
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
 
 
 
